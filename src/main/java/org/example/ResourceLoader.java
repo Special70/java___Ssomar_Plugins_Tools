@@ -1,6 +1,8 @@
 package org.example;
 
 import org.example.resourceLoaderFunctions.Resource_Fonts;
+import org.example.resourceLoaderFunctions.Resource_ConfigPropertiesReader;
+import org.example.resourceLoaderFunctions.Resource_Lang;
 
 import javax.swing.*;
 
@@ -13,6 +15,8 @@ public class ResourceLoader {
             e.printStackTrace();
         }
 
+        Resource_ConfigPropertiesReader.run(); // Reads config.properties
         Resource_Fonts.run(); // Load Fonts
+        Resource_Lang.run(); // Load the correct language properties file
     }
 }

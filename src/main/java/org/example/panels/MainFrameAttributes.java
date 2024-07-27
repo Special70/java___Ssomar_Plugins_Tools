@@ -1,6 +1,8 @@
 package org.example.panels;
 
 import org.example.GlobalFunctions;
+import org.example.JFrameObjectHandler;
+import org.example.resourceLoaderFunctions.Resource_Lang;
 
 import javax.swing.*;
 import java.awt.*;
@@ -11,6 +13,7 @@ import java.io.File;
 public class MainFrameAttributes extends JPanel {
     private JLabel topLabel;
     private JPanel contentPanel;
+
 
     public MainFrameAttributes() {
 
@@ -32,7 +35,6 @@ public class MainFrameAttributes extends JPanel {
             // ===================================================================
             contentPanel.add(new Option_FixItems());
             // ===================================================================
-
         this.add(contentPanel, BorderLayout.CENTER);
 
 
@@ -44,19 +46,21 @@ public class MainFrameAttributes extends JPanel {
 }
 
 // JPanel that holds the button that allows users to select a folder to
-//
+// open another GUI that allows the users to select what issues they want to fix
 
 class Option_FixItems extends JPanel implements ActionListener {
+    public String selectedFolderPath;
+    private void setSelectedFolderPath(String path) {selectedFolderPath = path;}
     private JButton button = new JButton();
-    private JLabel labelDescription = GlobalFunctions.createLabel("Click to select a folder and open the UI");
+    private JLabel labelDescription = GlobalFunctions.createLabel(Resource_Lang.langFile.getProperty("MainFrameAttributes_OptionFixItems_labelDescription"));
 
     Option_FixItems() {
         this.setBorder(BorderFactory.createCompoundBorder(
                 BorderFactory.createEmptyBorder(10, 10, 10, 10),
-                BorderFactory.createTitledBorder("Fix items")
+                BorderFactory.createTitledBorder( Resource_Lang.langFile.getProperty("MainFrameAttributes_OptionFixItems_titleBorder"))
         ));
 
-        this.button.setText("Select Folder");
+        this.button.setText(Resource_Lang.langFile.getProperty("MainFrameAttributes_OptionFixItems_button"));
         this.button.addActionListener(this);
 
         this.add(button);
@@ -64,7 +68,7 @@ class Option_FixItems extends JPanel implements ActionListener {
     }
     @Override
     public void actionPerformed(ActionEvent e) {
-
+        // Uses JFileChooser to select folders instead of files
         JFileChooser chooser = new JFileChooser();
         chooser.setCurrentDirectory(new File("."));
         chooser.setDialogTitle("Select Folder");
@@ -72,7 +76,9 @@ class Option_FixItems extends JPanel implements ActionListener {
         chooser.setAcceptAllFileFilterUsed(false);
 
         if (chooser.showOpenDialog(this) == JFileChooser.APPROVE_OPTION) {
-            System.out.println("Selected Folder: "+chooser.getSelectedFile());
+            this.setSelectedFolderPath(chooser.getSelectedFile().toString());
+            JFrameObjectHandler.mainObj.mainFrameObj.setVisible(false);
+            JFrameObjectHandler.mainObj.fixItemsUIObj.setVisible(true);
         }
     }
 }

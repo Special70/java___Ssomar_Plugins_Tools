@@ -1,5 +1,7 @@
 package org.example.jframes.childs_mainFrame;
 
+import org.example.panels.childs_mainFrame.FixItemsUIAttributes;
+
 import javax.swing.*;
 
 public class FixItemsUI extends JFrame {
@@ -12,7 +14,7 @@ public class FixItemsUI extends JFrame {
         this.setLayout(null);
 
         // CONTENT SECTION =================================================
-
+            this.add(new FixItemsUIAttributes());
         // CONTENT SECTION =================================================
 
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

@@ -1,6 +1,6 @@
 package org.example;
 
-import org.example.resourceLoaderFunctions.Resource_Fonts;
+import org.example.resource_loader_functions.Resource_Fonts;
 
 import javax.swing.*;
 

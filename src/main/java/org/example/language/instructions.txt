@@ -1,0 +1,8 @@
+How to add more languages besides English?
+
+1) create a new .propertiles file
+Ex: lang_PH.properties, lang_RU.properties, lang_CN.properties
+2) copypaste the contents of lang_EN.properties to the new .properties file
+3) go to config.properties and change "language" value to whatever it is
+Ex: PH, RU, CN
+4) go to resourceLoaderFunctions/Resource_Lang.yml to add the language

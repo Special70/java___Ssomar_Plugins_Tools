@@ -1,4 +1,4 @@
-package org.example.resourceLoaderFunctions;
+package org.example.resource_loader_functions;
 
 import java.awt.*;
 import java.io.File;

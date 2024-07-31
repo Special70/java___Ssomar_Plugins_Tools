@@ -1,4 +1,4 @@
-package org.example.resourceLoaderFunctions;
+package org.example.resource_loader_functions;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -12,7 +12,8 @@ public class Resource_Lang extends Properties{
     public static void run() {
         // For adding more language, refer to this switch case.
         switch (Resource_ConfigPropertiesReader.file.getProperty("language")) {
-            case "EN" : selectedLang = "lang_EN.properties";
+            case "EN" : selectedLang = "lang_EN.properties"; break;
+            default: selectedLang = "lang_EN.properties"; break;
         }
 
 

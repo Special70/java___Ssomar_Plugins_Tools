@@ -1,8 +1,8 @@
 package org.example;
 
-import org.example.resourceLoaderFunctions.Resource_Fonts;
-import org.example.resourceLoaderFunctions.Resource_ConfigPropertiesReader;
-import org.example.resourceLoaderFunctions.Resource_Lang;
+import org.example.resource_loader_functions.Resource_Fonts;
+import org.example.resource_loader_functions.Resource_ConfigPropertiesReader;
+import org.example.resource_loader_functions.Resource_Lang;
 
 import javax.swing.*;
 

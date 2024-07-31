@@ -1,4 +1,4 @@
-package org.example.resourceLoaderFunctions;
+package org.example.resource_loader_functions;
 
 import java.io.FileInputStream;
 import java.io.IOException;

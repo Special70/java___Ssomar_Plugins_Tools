@@ -1,11 +1,12 @@
 package org.example.jframes;
 
-import org.example.panels.MainFrameAttributes;
+import org.example.panels.MainFrame_Attributes;
 
 import javax.swing.*;
 
 public class MainFrame extends JFrame {
-    ImageIcon programIcon = new ImageIcon("assets/icon.png");
+    private ImageIcon programIcon = new ImageIcon("assets/icon.png");
+
     public MainFrame() {
         this.setSize(1000, 800);
         this.setTitle("Ssomar Plugins Tools");
@@ -13,7 +14,7 @@ public class MainFrame extends JFrame {
         this.setLayout(null);
 
         // CONTENT SECTION =================================================
-        this.add(new MainFrameAttributes());
+            this.add(new MainFrame_Attributes());
 
         // CONTENT SECTION =================================================
 

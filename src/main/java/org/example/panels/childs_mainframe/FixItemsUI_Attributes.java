@@ -23,7 +23,7 @@ public class FixItemsUI_Attributes extends JPanel implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == startButton) {
-            JFrameObjectHandler.mainObj.changeOpenedJFrame(JFrameObjectHandler.JFRAMES.FIX_ITEMS_UI_CONSOLE_WINDOW);
+            JFrameObjectHandler.changeOpenedJFrame(JFrameObjectHandler.JFRAMES.FIX_ITEMS_UI_CONSOLE_WINDOW);
             FixItems_Processor.staticObj.start();
         }
     }

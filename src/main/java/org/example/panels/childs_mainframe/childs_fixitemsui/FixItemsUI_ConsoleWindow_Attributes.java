@@ -10,7 +10,7 @@ public class FixItemsUI_ConsoleWindow_Attributes extends JPanel {
 
     public FixItemsUI_ConsoleWindow_Attributes() {
         this.setBorder(BorderFactory.createLineBorder(Color.BLACK));
-        this.setBounds(100, 80, 800, 600);
+        this.setBounds(125, 80, 1250, 800);
         this.setLayout(new GridLayout(1, 1, 0, 0));
 
         consoleWindowOutput.setEditable(false);

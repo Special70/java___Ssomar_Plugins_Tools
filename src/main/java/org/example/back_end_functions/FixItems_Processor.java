@@ -6,7 +6,10 @@ import org.example.panels.childs_mainframe.Selection_Functions;
 import org.example.panels.childs_mainframe.childs_fixitemsui.FixItemsUI_ConsoleWindow_Attributes;
 import org.example.resource_loader_functions.Resource_Lang;
 
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
 import java.util.ArrayList;
+import java.util.Date;
 
 /*
 * Runs various steps to fix item configs
@@ -27,12 +30,14 @@ public class FixItems_Processor extends Thread {
     @Override
     public void run() {
         try {
+            // Calculating Runtime
+            long start = System.currentTimeMillis();
+
             consoleLog(Resource_Lang.langFile.getProperty("FixItems_Processor_startMsg")); // START
 
             ValidateFiles.executeTask();
 
             if (Selection_Functions.button_fixTPCommand.isSelected()) {
-
                 FixTPCommand.executeTask();
             }
 
@@ -42,7 +47,10 @@ public class FixItems_Processor extends Thread {
 
 
 
-
+            // Checking runtime duration
+            long end = System.currentTimeMillis();
+            NumberFormat formatter = new DecimalFormat("#0.00000");
+            consoleLog("TASK DURATION: "+ formatter.format((end - start) / 1000d) + " seconds");
 
         } catch (Exception e) {
             consoleLog(String.valueOf(e.getStackTrace()));

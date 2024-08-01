@@ -43,7 +43,7 @@ public class FixItemsUI extends JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == backButton) {
-            JFrameObjectHandler.mainObj.changeOpenedJFrame(JFrameObjectHandler.JFRAMES.MAIN_FRAME);
+            JFrameObjectHandler.changeOpenedJFrame(JFrameObjectHandler.JFRAMES.MAIN_FRAME);
         }
     }
 

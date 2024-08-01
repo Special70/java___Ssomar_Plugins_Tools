@@ -32,6 +32,35 @@ public class FixTPCommand {
                     contentOfTheTargetfile.append(System.lineSeparator());
                 }
 
+                // Starts editing the file
+                consoleLog(Resource_Lang.langFile.getProperty("FixItems_Processor_FixTPCommand_startEditing").replace("%path%", path));
+                    // Counts the number of instances found (replaces "%count%" with a regex that searches using "(?<!minecraft:)tp)
+                    long numberOfPatternsFound = Pattern.compile("(?<!minecraft:)tp").matcher(contentOfTheTargetfile).results().count();
+
+                    // Checks if instances are detected. Otherwise, skip writing
+                    if (numberOfPatternsFound <= 0) {
+                        consoleLog(Resource_Lang.langFile.getProperty("FixItems_Processor_FixTPCommand_countPatternsMsg")
+                                .replace("%count%", String.valueOf(numberOfPatternsFound))
+                                .replace("%skip%","SKIPPING!")
+                        );
+                        continue;
+                    }
+
+                    consoleLog(Resource_Lang.langFile.getProperty("FixItems_Processor_FixTPCommand_countPatternsMsg")
+                        .replace("%count%", String.valueOf(numberOfPatternsFound))
+                        .replace("%skip%","")
+                    );
+                // Starts writing the new version to the target file
+                    String itemFileConfigurationTextHolder = contentOfTheTargetfile.toString().replaceAll("(?<!minecraft:)tp","minecraft:tp");
+                    FileWriter fileWriter = new FileWriter(path);
+                    for (int iteration = 0; iteration < itemFileConfigurationTextHolder.length(); iteration++) {
+                        fileWriter.write(itemFileConfigurationTextHolder.charAt(iteration));
+                    }
+                consoleLog(Resource_Lang.langFile.getProperty("FixItems_Processor_FixTPCommand_endEditing").replace("%path%", path));
+                    fileWriter.close();
+
+
+
             }
 
             consoleLog(Resource_Lang.langFile.getProperty("FixItems_Processor_FixTPCommand_endMsg"));

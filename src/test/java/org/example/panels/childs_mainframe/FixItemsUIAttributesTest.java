@@ -1,5 +1,6 @@
 package org.example.panels.childs_mainframe;
 
+import org.example.GlobalFunctions;
 import org.junit.jupiter.api.Test;
 import org.yaml.snakeyaml.Yaml;
 
@@ -42,31 +43,4 @@ class FixItemsUIAttributesTest {
         }
     }
 
-    @Test
-    void iterateThroughEachFile() {
-        File dir = new File("src/test/java/org/example/panels/childs_mainFrame/testFiles/items/");
-        File[] directoryListing = dir.listFiles();
-
-        Pattern pattern1 = Pattern.compile(".*\\.(yml)");
-
-        if (directoryListing != null) {
-            for (File child : directoryListing) {
-                if (pattern1.matcher(child.getPath()).find()) {
-                    Yaml yaml = new Yaml();
-                    try (InputStream inputStream = new FileInputStream(child.getPath())) {
-                        Map<String, Object> data = yaml.load(inputStream);
-                        // Validate data here
-                        String dummy = String.valueOf(data);
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
-                }
-            }
-        } else {
-            // Handle the case where dir is not really a directory.
-            // Checking dir.isDirectory() above would not be sufficient
-            // to avoid race conditions with another process that deletes
-            // directories.
-        }
-    }
 }

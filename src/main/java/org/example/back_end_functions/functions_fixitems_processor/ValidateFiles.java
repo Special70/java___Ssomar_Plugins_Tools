@@ -20,9 +20,11 @@ public class ValidateFiles {
     }
     public static void executeTask() {
         try {
+            // consoleLog() : adds text to the jtextarea in FixItemsUI_ConsoleWindow_Attributes
             ArrayList<String> recordsOfValidYMLFiles = new ArrayList<>(); // To be transferred later
 
             consoleLog(Resource_Lang.langFile.getProperty("FixItems_Processor_ValidateFiles_startMsg"));
+
             File selectedDir = new File(Resource_GlobalVariables.selectedFilePath);
             File[] directoryListing = selectedDir.listFiles();
 

@@ -40,7 +40,7 @@ class Option_FixItems extends JPanel implements ActionListener {
         if (chooser.showOpenDialog(this) == JFileChooser.APPROVE_OPTION) {
             Resource_GlobalVariables.selectedFilePath = chooser.getSelectedFile().toString();
             FixItemsUI.filePathLabel.setText("Selected Path: " + Resource_GlobalVariables.selectedFilePath); // Sets the jlabel value to show the selected file path
-            JFrameObjectHandler.mainObj.changeOpenedJFrame(JFrameObjectHandler.JFRAMES.FIX_ITEMS_UI);
+            JFrameObjectHandler.changeOpenedJFrame(JFrameObjectHandler.JFRAMES.FIX_ITEMS_UI);
         }
     }
 }

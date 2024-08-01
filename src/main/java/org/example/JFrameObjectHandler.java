@@ -35,7 +35,7 @@ public class JFrameObjectHandler {
 
 
 
-    public void changeOpenedJFrame (JFRAMES ui) {
+    public static void changeOpenedJFrame (JFRAMES ui) {
         // TLDR: hides the previous ui and shows the selected ui while centering
         // both jframes and recording the value of the newly selected ui
         fetchVariable(Resource_GlobalVariables.currentlyOpenedJFrame).setVisible(false);
@@ -45,21 +45,21 @@ public class JFrameObjectHandler {
         Resource_GlobalVariables.currentlyOpenedJFrame = ui;
     }
 
-    public JFrame fetchVariable(JFRAMES value) { // For utilizing enums and reducing possible code reuse
+    public static JFrame fetchVariable(JFRAMES value) { // For utilizing enums and reducing possible code reuse
         // Q : Why the heck do you even need this when you can just write 2 switch-cases? Is it because of code duplication issues?
         // A : I have a shit brain and as the program grows, I might forget to write some enums in the switch case. So the best option really is this. And also super easy to track the stuff
         switch (value) {
             case MAIN_FRAME -> {
-                return this.mainFrameObj;
+                return mainObj.mainFrameObj;
             }
             case FIX_ITEMS_UI -> {
-                return this.fixItemsUIObj;
+                return mainObj.fixItemsUIObj;
             }
             case FIX_ITEMS_UI_CONSOLE_WINDOW -> {
-                return this.fixItemsUI_consoleWindowObj;
+                return mainObj.fixItemsUI_consoleWindowObj;
             }
             default -> {
-                return this.mainFrameObj;
+                return mainObj.mainFrameObj;
             }
         }
     }

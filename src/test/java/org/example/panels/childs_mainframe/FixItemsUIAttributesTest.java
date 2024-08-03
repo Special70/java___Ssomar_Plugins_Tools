@@ -1,13 +1,9 @@
 package org.example.panels.childs_mainframe;
 
-import org.example.GlobalFunctions;
 import org.junit.jupiter.api.Test;
-import org.yaml.snakeyaml.Yaml;
 
 import java.io.*;
-import java.util.Map;
 import java.util.Scanner;
-import java.util.regex.Pattern;
 
 class FixItemsUIAttributesTest {
     @Test

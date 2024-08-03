@@ -1,14 +1,14 @@
-package org.example.panels.childs_mainframe.childs_fixitemsui;
+package org.example.global_assets;
 
 
 import javax.swing.*;
 import java.awt.*;
 
-public class FixItemsUI_ConsoleWindow_Attributes extends JPanel {
+public class ConsoleWindow_Attributes extends JPanel {
     public static JTextArea consoleWindowOutput = new JTextArea("", 10, 10);
     private JScrollPane consoleWindowPane = new JScrollPane(consoleWindowOutput);
 
-    public FixItemsUI_ConsoleWindow_Attributes() {
+    public ConsoleWindow_Attributes() {
         this.setBorder(BorderFactory.createLineBorder(Color.BLACK));
         this.setBounds(125, 80, 1250, 800);
         this.setLayout(new GridLayout(1, 1, 0, 0));

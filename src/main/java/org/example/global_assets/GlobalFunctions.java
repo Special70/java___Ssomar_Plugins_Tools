@@ -1,9 +1,8 @@
-package org.example;
+package org.example.global_assets;
 
 import org.example.resource_loader_functions.Resource_Fonts;
 
 import javax.swing.*;
-import java.util.regex.Pattern;
 
 public class GlobalFunctions {
 

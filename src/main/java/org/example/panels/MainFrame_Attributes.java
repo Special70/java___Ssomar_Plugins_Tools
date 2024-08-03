@@ -1,6 +1,6 @@
 package org.example.panels;
 
-import org.example.GlobalFunctions;
+import org.example.global_assets.GlobalFunctions;
 
 import javax.swing.*;
 import java.awt.*;

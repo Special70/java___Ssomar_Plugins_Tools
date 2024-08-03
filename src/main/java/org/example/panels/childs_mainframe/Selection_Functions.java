@@ -7,7 +7,7 @@ import java.awt.*;
 
 public class Selection_Functions extends JPanel {
     public static JCheckBox button_fixTPCommand = new JCheckBox(Resource_Lang.langFile.getProperty("FixItemsUIAttributes_Selection-Functions_button-fixTPCommand"));
-    public static JCheckBox button_convertDustCommandsToPre_1_20_5 = new JCheckBox(Resource_Lang.langFile.getProperty("FixItemsUIAttributes_Selection-Functions_button-convertDustCommandToPre-1-20-5"));
+    public static JCheckBox button_convertDustCommandsTo_1_20_5 = new JCheckBox(Resource_Lang.langFile.getProperty("FixItemsUIAttributes_Selection-Functions_button-convertDustCommandToPre-1-20-5"));
 
     Selection_Functions() {
         this.setBorder(BorderFactory.createCompoundBorder(
@@ -16,7 +16,7 @@ public class Selection_Functions extends JPanel {
         ));
         this.setLayout(new FlowLayout());
         this.add(button_fixTPCommand);
-        this.add(button_convertDustCommandsToPre_1_20_5);
+        this.add(button_convertDustCommandsTo_1_20_5);
 
     }
 }

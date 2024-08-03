@@ -1,7 +1,7 @@
 package org.example.back_end_functions.functions_fixitems_processor;
 
 import org.example.back_end_functions.FixItems_Processor;
-import org.example.panels.childs_mainframe.childs_fixitemsui.FixItemsUI_ConsoleWindow_Attributes;
+import org.example.global_assets.ConsoleWindow_Attributes;
 import org.example.resource_loader_functions.Resource_Lang;
 
 import java.io.BufferedReader;
@@ -12,9 +12,9 @@ import java.util.regex.Pattern;
 
 public class FixTPCommand {
     private static void consoleLog(String value) {
-        FixItemsUI_ConsoleWindow_Attributes.consoleWindowOutput.append(value+"\n");
-        FixItemsUI_ConsoleWindow_Attributes.consoleWindowOutput.setCaretPosition(
-                FixItemsUI_ConsoleWindow_Attributes.consoleWindowOutput.getDocument().getLength()
+        ConsoleWindow_Attributes.consoleWindowOutput.append(value+"\n");
+        ConsoleWindow_Attributes.consoleWindowOutput.setCaretPosition(
+                ConsoleWindow_Attributes.consoleWindowOutput.getDocument().getLength()
         );
     }
     public static void executeTask() {

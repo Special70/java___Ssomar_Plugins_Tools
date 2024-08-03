@@ -1,15 +1,15 @@
 package org.example.back_end_functions;
 
+import org.example.back_end_functions.functions_fixitems_processor.ConvertDustCMDTo_1_20_5;
 import org.example.back_end_functions.functions_fixitems_processor.FixTPCommand;
 import org.example.back_end_functions.functions_fixitems_processor.ValidateFiles;
 import org.example.panels.childs_mainframe.Selection_Functions;
-import org.example.panels.childs_mainframe.childs_fixitemsui.FixItemsUI_ConsoleWindow_Attributes;
+import org.example.global_assets.ConsoleWindow_Attributes;
 import org.example.resource_loader_functions.Resource_Lang;
 
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.util.ArrayList;
-import java.util.Date;
 
 /*
 * Runs various steps to fix item configs
@@ -17,16 +17,16 @@ import java.util.Date;
 
 
 public class FixItems_Processor extends Thread {
-    public static FixItems_Processor staticObj = new FixItems_Processor();
 
-    public static ArrayList<String> validYmlFilePaths = new ArrayList<>();
+    public static ArrayList<String> validYmlFilePaths = new ArrayList<>(); // access this variable to modify the list of valid file paths
 
     private static void consoleLog(String value) {
-        FixItemsUI_ConsoleWindow_Attributes.consoleWindowOutput.append(value+"\n");
-        FixItemsUI_ConsoleWindow_Attributes.consoleWindowOutput.setCaretPosition(
-                FixItemsUI_ConsoleWindow_Attributes.consoleWindowOutput.getDocument().getLength()
+        ConsoleWindow_Attributes.consoleWindowOutput.append(value+"\n");
+        ConsoleWindow_Attributes.consoleWindowOutput.setCaretPosition(
+                ConsoleWindow_Attributes.consoleWindowOutput.getDocument().getLength()
         );
     }
+
     @Override
     public void run() {
         try {
@@ -41,7 +41,9 @@ public class FixItems_Processor extends Thread {
                 FixTPCommand.executeTask();
             }
 
-
+            if (Selection_Functions.button_convertDustCommandsTo_1_20_5.isSelected()) {
+                ConvertDustCMDTo_1_20_5.executeTask();
+            }
 
 
 

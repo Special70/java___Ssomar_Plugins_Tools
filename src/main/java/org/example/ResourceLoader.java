@@ -6,8 +6,9 @@ import org.example.resource_loader_functions.Resource_Lang;
 
 import javax.swing.*;
 
-public class ResourceLoader {
-    public static void run() {
+public class ResourceLoader extends Thread {
+    @Override
+    public void run() {
         // Adjust UI Looks
         try {
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
@@ -18,5 +19,9 @@ public class ResourceLoader {
         Resource_ConfigPropertiesReader.run(); // Reads config.properties
         Resource_Fonts.run(); // Load Fonts
         Resource_Lang.run(); // Load the correct language properties file
+
+        synchronized (this) {
+            notify();
+        }
     }
 }

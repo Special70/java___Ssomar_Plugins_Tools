@@ -7,6 +7,7 @@ import org.example.panels.Option_FixItems;
 import org.example.resource_loader_functions.Resource_GlobalVariables;
 
 import javax.swing.*;
+import javax.swing.filechooser.FileSystemView;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
@@ -36,7 +37,7 @@ public class MainFrame extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == Option_FixItems.button) {
             // Uses JFileChooser to select folders instead of files
-            JFileChooser chooser = new JFileChooser();
+            JFileChooser chooser = new JFileChooser(FileSystemView.getFileSystemView().getHomeDirectory());
             chooser.setCurrentDirectory(new File("."));
             chooser.setDialogTitle("Select Folder");
             chooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);

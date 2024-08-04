@@ -1,7 +1,7 @@
 package org.example.back_end_functions;
 
 import org.example.back_end_functions.functions_fixitems_processor.ConvertDustCMDTo_1_20_5;
-import org.example.back_end_functions.functions_fixitems_processor.FixTPCommand;
+import org.example.back_end_functions.functions_fixitems_processor.SpecifyVanillaCommands;
 import org.example.back_end_functions.functions_fixitems_processor.ValidateFiles;
 import org.example.panels.childs_mainframe.Selection_Functions;
 import org.example.global_assets.ConsoleWindow_Attributes;
@@ -35,10 +35,12 @@ public class FixItems_Processor extends Thread {
 
             consoleLog(Resource_Lang.langFile.getProperty("FixItems_Processor_startMsg")); // START
 
+            // Validate each file in the target directory to see which ones are valid
             ValidateFiles.executeTask();
 
-            if (Selection_Functions.button_fixTPCommand.isSelected()) {
-                FixTPCommand.executeTask();
+            // Start specifying commands with minecraft:
+            if (Selection_Functions.button_specifyVanillaCommands.isSelected()) {
+                SpecifyVanillaCommands.executeTask();
             }
 
             if (Selection_Functions.button_convertDustCommandsTo_1_20_5.isSelected()) {

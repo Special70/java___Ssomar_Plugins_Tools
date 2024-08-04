@@ -48,7 +48,6 @@ public class FixItemsUI extends JFrame implements ActionListener {
 
             // ADDING ACTION LISTENER FROM ATTRIBUTE JPANEL CLASS FILE
             FixItemsUI_Attributes.startButton.setActionCommand(ActionName.START_BUTTON.name());
-            System.out.println("INVESTIGATE TRIGGER COUNTS HERE");
             if (FixItemsUI_Attributes.startButton.getActionListeners().length < 1) {
                 FixItemsUI_Attributes.startButton.addActionListener(this);
             }

@@ -1,24 +1,16 @@
 package org.example.panels.childs_mainframe;
 
+import li.flor.nativejfilechooser.NativeJFileChooser;
 import org.junit.jupiter.api.Test;
 
+import javax.swing.*;
 import java.io.*;
 import java.util.Scanner;
 
 class FixItemsUIAttributesTest {
     @Test
-    void checkFiles0() {
-
-        try {
-            StringBuilder customString = new StringBuilder();
-            FileReader targetFile = new FileReader("src/test/java/org/example/panels/childs_mainFrame/testFiles/sangwoo.yml");
-            while (targetFile.ready()) {
-                customString.append((char) targetFile.read());
-            }
-
-        }  catch (IOException e) {
-            e.printStackTrace();
-        }
+    void jfileChooser() {
+        JFileChooser fileChooser = new NativeJFileChooser();
     }
 
     @Test

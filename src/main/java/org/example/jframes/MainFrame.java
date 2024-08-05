@@ -1,5 +1,6 @@
 package org.example.jframes;
 
+import li.flor.nativejfilechooser.NativeJFileChooser;
 import org.example.JFrameObjectHandler;
 import org.example.jframes.childs_mainframe.FixItemsUI;
 import org.example.panels.MainFrame_Attributes;
@@ -37,7 +38,7 @@ public class MainFrame extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == Option_FixItems.button) {
             // Uses JFileChooser to select folders instead of files
-            JFileChooser chooser = new JFileChooser(FileSystemView.getFileSystemView().getHomeDirectory());
+            JFileChooser chooser = new NativeJFileChooser(FileSystemView.getFileSystemView().getHomeDirectory());
             chooser.setCurrentDirectory(new File("."));
             chooser.setDialogTitle("Select Folder");
             chooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);

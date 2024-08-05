@@ -1,7 +1,7 @@
 package org.example.global_assets;
 
-import org.example.JFrameObjectHandler;
-import org.example.JFrameObjectHandler.JFRAMES;
+import org.example.System_JFrameObjectHandler;
+import org.example.System_JFrameObjectHandler.JFRAMES;
 import org.example.resource_loader_functions.Resource_Lang;
 
 import javax.swing.*;
@@ -15,7 +15,7 @@ public class ConsoleWindow extends JFrame implements ActionListener {
 
     public static void bootConsole() {
         ConsoleWindow_Attributes.consoleWindowOutput.setText(""); // Wipe console
-        JFrameObjectHandler.changeOpenedJFrame(JFRAMES.CONSOLE_WINDOW);
+        System_JFrameObjectHandler.changeOpenedJFrame(JFRAMES.CONSOLE_WINDOW);
     }
 
     public ConsoleWindow() {
@@ -44,7 +44,7 @@ public class ConsoleWindow extends JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == backButton) {
-            JFrameObjectHandler.changeOpenedJFrame(JFRAMES.MAIN_FRAME);
+            System_JFrameObjectHandler.changeOpenedJFrame(JFRAMES.MAIN_FRAME);
         }
     }
 }

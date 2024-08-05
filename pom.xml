@@ -37,6 +37,5 @@
             <artifactId>javafx-swing</artifactId>
             <version>23-ea+22</version>
         </dependency>
-
     </dependencies>
 </project>

@@ -1,6 +1,6 @@
 package org.example.resource_loader_functions;
 
-import org.example.JFrameObjectHandler;
+import org.example.System_JFrameObjectHandler;
 
 public class Resource_GlobalVariables {
     /**
@@ -12,5 +12,5 @@ public class Resource_GlobalVariables {
      * No. This does not actively track which JFrame is visible. External code is responsible
      * for rewriting the value that's stored in this variable.
      */
-    public static JFrameObjectHandler.JFRAMES currentlyOpenedJFrame = JFrameObjectHandler.JFRAMES.MAIN_FRAME; // Stores what UI is opened so the rest of the program knows which UI is opened at the moment
+    public static System_JFrameObjectHandler.JFRAMES currentlyOpenedJFrame = System_JFrameObjectHandler.JFRAMES.MAIN_FRAME; // Stores what UI is opened so the rest of the program knows which UI is opened at the moment
 }

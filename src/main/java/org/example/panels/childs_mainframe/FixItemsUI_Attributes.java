@@ -1,5 +1,6 @@
 package org.example.panels.childs_mainframe;
 
+import org.example.panels.Selection_Functions;
 import org.example.resource_loader_functions.Resource_Lang;
 
 import javax.swing.*;

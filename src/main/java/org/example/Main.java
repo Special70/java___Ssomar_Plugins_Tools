@@ -1,6 +1,6 @@
 package org.example;
 
-import static org.example.JFrameObjectHandler.mainObj;
+import static org.example.System_JFrameObjectHandler.mainObj;
 
 public class Main {
 

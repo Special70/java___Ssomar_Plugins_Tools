@@ -1,11 +1,12 @@
 package org.example.jframes;
 
 import li.flor.nativejfilechooser.NativeJFileChooser;
-import org.example.JFrameObjectHandler;
+import org.example.System_JFrameObjectHandler;
 import org.example.jframes.childs_mainframe.FixItemsUI;
 import org.example.panels.MainFrame_Attributes;
-import org.example.panels.Option_FixItems;
+import org.example.panels.childs_mainframe.Option_FixItems;
 import org.example.resource_loader_functions.Resource_GlobalVariables;
+import org.example.resource_loader_functions.Resource_Images;
 
 import javax.swing.*;
 import javax.swing.filechooser.FileSystemView;
@@ -14,7 +15,8 @@ import java.awt.event.ActionListener;
 import java.io.File;
 
 public class MainFrame extends JFrame implements ActionListener {
-    private ImageIcon programIcon = new ImageIcon("assets/icon.png");
+    private ImageIcon programIcon = Resource_Images.getImage();
+
 
     public MainFrame() {
         this.setSize(1000, 800);
@@ -47,7 +49,7 @@ public class MainFrame extends JFrame implements ActionListener {
             if (chooser.showOpenDialog(this) == JFileChooser.APPROVE_OPTION) {
                 Resource_GlobalVariables.selectedFilePath = chooser.getSelectedFile().toString();
                 FixItemsUI.filePathLabel.setText("Selected Path: " + Resource_GlobalVariables.selectedFilePath); // Sets the jlabel value to show the selected file path
-                JFrameObjectHandler.changeOpenedJFrame(JFrameObjectHandler.JFRAMES.FIX_ITEMS_UI);
+                System_JFrameObjectHandler.changeOpenedJFrame(System_JFrameObjectHandler.JFRAMES.FIX_ITEMS_UI);
             }
         }
     }

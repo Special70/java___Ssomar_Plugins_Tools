@@ -1,6 +1,5 @@
 package org.example.panels;
 
-import org.example.panels.childs_mainframe.Option_FixItems;
 import org.example.global_assets.GlobalFunctions;
 
 import javax.swing.*;
@@ -17,7 +16,7 @@ public class MainFrame_Attributes extends JPanel {
 
         // ===================================================================
         this.setLayout(new BorderLayout(2, 2));
-        this.topLabel = GlobalFunctions.createLabel("Ssomar Plugins Utility Program");
+        this.topLabel = GlobalFunctions.createLabel("Ssomar Plugins Utility Program", 20);
         this.topLabel.setHorizontalAlignment(SwingConstants.CENTER);
 
         this.add(this.topLabel, BorderLayout.NORTH);

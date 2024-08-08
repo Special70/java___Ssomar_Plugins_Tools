@@ -1,6 +1,5 @@
 package org.example;
 
-import org.example.resource_loader_functions.Resource_Fonts;
 import org.example.resource_loader_functions.Resource_ConfigPropertiesReader;
 import org.example.resource_loader_functions.Resource_Lang;
 
@@ -17,7 +16,6 @@ public class ResourceLoader extends Thread {
         }
 
         Resource_ConfigPropertiesReader.run(); // Reads config.properties
-        Resource_Fonts.run(); // Load Fonts
         Resource_Lang.run(); // Load the correct language properties file
 
         synchronized (this) {

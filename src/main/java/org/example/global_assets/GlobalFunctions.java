@@ -1,15 +1,21 @@
 package org.example.global_assets;
 
-import org.example.resource_loader_functions.Resource_Fonts;
-
 import javax.swing.*;
+import java.awt.*;
 
 public class GlobalFunctions {
 
-    public static JLabel createLabel(String text) {
+    public static JLabel createLabel(String text, float fontSize) {
         JLabel label = new JLabel(text);
-        label.setFont(Resource_Fonts.interVariable);
-        return label;
+        try {
+            label.setFont(Font.createFont(Font.TRUETYPE_FONT
+                    ,GlobalFunctions.class.getResourceAsStream("/fonts/Inter/Inter-VariableFont_slnt,wght.ttf")).deriveFont(fontSize));
+
+            return label;
+        } catch (Exception e) {
+
+        }
+        return new JLabel(); // Dummy line
     }
 
 }

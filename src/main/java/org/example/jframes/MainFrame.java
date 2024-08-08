@@ -4,7 +4,7 @@ import li.flor.nativejfilechooser.NativeJFileChooser;
 import org.example.System_JFrameObjectHandler;
 import org.example.jframes.childs_mainframe.FixItemsUI;
 import org.example.panels.MainFrame_Attributes;
-import org.example.panels.childs_mainframe.Option_FixItems;
+import org.example.panels.Option_FixItems;
 import org.example.resource_loader_functions.Resource_GlobalVariables;
 import org.example.resource_loader_functions.Resource_Images;
 

@@ -1,4 +1,4 @@
-package org.example.panels;
+package org.example.panels.childs_mainframe_fixitems;
 
 import org.example.resource_loader_functions.Resource_Lang;
 

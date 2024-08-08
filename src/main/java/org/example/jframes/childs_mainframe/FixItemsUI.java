@@ -4,7 +4,7 @@ import org.example.back_end_functions.FixItems_Processor;
 import org.example.global_assets.ConsoleWindow;
 import org.example.global_assets.GlobalFunctions;
 import org.example.System_JFrameObjectHandler;
-import org.example.panels.childs_mainframe.FixItemsUI_Attributes;
+import org.example.panels.childs_mainframe_fixitems.FixItemsUI_Attributes;
 import org.example.resource_loader_functions.Resource_Images;
 import org.example.resource_loader_functions.Resource_Lang;
 
@@ -15,8 +15,8 @@ import java.util.Objects;
 
 public class FixItemsUI extends JFrame implements ActionListener {
     private ImageIcon programIcon = Resource_Images.getImage();
-    public static JLabel headerLabel = GlobalFunctions.createLabel(Resource_Lang.langFile.getProperty("FixItemsUI_headerLabel"));
-    public static JLabel filePathLabel = GlobalFunctions.createLabel("");
+    public static JLabel headerLabel = GlobalFunctions.createLabel(Resource_Lang.langFile.getProperty("FixItemsUI_headerLabel"), 20);
+    public static JLabel filePathLabel = GlobalFunctions.createLabel("", 20);
     private JButton backButton = new JButton(Resource_Lang.langFile.getProperty("FixItemsUI_Back"));
 
     /**

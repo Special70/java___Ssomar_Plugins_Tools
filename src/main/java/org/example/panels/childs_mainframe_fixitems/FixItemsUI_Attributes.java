@@ -1,6 +1,5 @@
-package org.example.panels.childs_mainframe;
+package org.example.panels.childs_mainframe_fixitems;
 
-import org.example.panels.Selection_Functions;
 import org.example.resource_loader_functions.Resource_Lang;
 
 import javax.swing.*;
@@ -13,8 +12,11 @@ public class FixItemsUI_Attributes extends JPanel {
         this.setBorder(BorderFactory.createDashedBorder(null));
         this.setLayout(new GridLayout(2, 1, 20, 20));
             this.add(new Selection_Functions());
+            startButton.setBorder(BorderFactory.createEmptyBorder(30, 30, 30, 30));
             startButton.setToolTipText(Resource_Lang.langFile.getProperty("FixItemsUIAttributes_startButtonToolTip"));
-            this.add(startButton);
+            JPanel buttonContainer = new JPanel();
+                buttonContainer.add(startButton);
+            this.add(buttonContainer);
     }
 }
 

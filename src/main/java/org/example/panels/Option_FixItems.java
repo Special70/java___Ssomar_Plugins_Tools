@@ -1,4 +1,4 @@
-package org.example.panels.childs_mainframe;
+package org.example.panels;
 
 import org.example.global_assets.GlobalFunctions;
 import org.example.resource_loader_functions.Resource_Lang;
@@ -7,7 +7,7 @@ import javax.swing.*;
 
 public class Option_FixItems extends JPanel {
     public static JButton button = new JButton();
-    private JLabel labelDescription = GlobalFunctions.createLabel(Resource_Lang.langFile.getProperty("MainFrameAttributes_OptionFixItems_labelDescription"));
+    private JLabel labelDescription = GlobalFunctions.createLabel(Resource_Lang.langFile.getProperty("MainFrameAttributes_OptionFixItems_labelDescription"), 12);
 
     public Option_FixItems() {
         this.setBorder(BorderFactory.createCompoundBorder(
@@ -17,8 +17,8 @@ public class Option_FixItems extends JPanel {
 
         button.setText(Resource_Lang.langFile.getProperty("MainFrameAttributes_OptionFixItems_button"));
 
-        this.add(button);
         this.add(labelDescription);
+        this.add(button);
     }
 
 }

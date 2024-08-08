@@ -3,7 +3,7 @@ package org.example.back_end_functions;
 import org.example.back_end_functions.functions_fixitems_processor.ConvertDustCMDTo_1_20_5;
 import org.example.back_end_functions.functions_fixitems_processor.SpecifyVanillaCommands;
 import org.example.back_end_functions.functions_fixitems_processor.ValidateFiles;
-import org.example.panels.Selection_Functions;
+import org.example.panels.childs_mainframe_fixitems.Selection_Functions;
 import org.example.global_assets.ConsoleWindow_Attributes;
 import org.example.resource_loader_functions.Resource_Lang;
 

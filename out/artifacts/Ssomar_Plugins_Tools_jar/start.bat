@@ -1,1 +1,0 @@
-java -jar Ssomar_Plugins_Tools.jar

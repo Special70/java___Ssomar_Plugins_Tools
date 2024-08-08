@@ -10,7 +10,7 @@ import java.awt.event.ActionListener;
 
 public class ConsoleWindow extends JFrame implements ActionListener {
     private ImageIcon programIcon = new ImageIcon("assets/icon.png");
-    private JLabel headerLabel = GlobalFunctions.createLabel(Resource_Lang.langFile.getProperty("FixItemsUI_ConsoleWindow_headerLabel"));
+    private JLabel headerLabel = GlobalFunctions.createLabel(Resource_Lang.langFile.getProperty("FixItemsUI_ConsoleWindow_headerLabel"), 20);
     private JButton backButton = new JButton(Resource_Lang.langFile.getProperty("FixItemsUI_ConsoleWindow_backButton"));
 
     public static void bootConsole() {

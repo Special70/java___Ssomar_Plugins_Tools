@@ -30,7 +30,6 @@ public class Resource_Lang extends Properties{
          */
         try (InputStream resourceStream = Resource_Lang.class.getResourceAsStream("/language/"+selectedLang)) {
             langFile.load(resourceStream);
-            System.out.println(langFile.getProperty("MainFrameAttributes_OptionFixItems_button"));
         } catch (Exception e) {
 
         }

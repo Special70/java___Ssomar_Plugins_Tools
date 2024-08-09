@@ -15,7 +15,8 @@ import java.awt.event.ActionListener;
 import java.io.File;
 
 public class MainFrame extends JFrame implements ActionListener {
-    private ImageIcon programIcon = Resource_Images.getImage();
+    private final ImageIcon programIcon = Resource_Images.getImage("/images/icon.png");
+    private final JFileChooser chooser = new NativeJFileChooser(FileSystemView.getFileSystemView().getHomeDirectory());
 
 
     public MainFrame() {
@@ -23,6 +24,11 @@ public class MainFrame extends JFrame implements ActionListener {
         this.setTitle("Ssomar Plugins Tools");
         this.setIconImage(programIcon.getImage());
         this.setLayout(null);
+
+        chooser.setCurrentDirectory(new File("."));
+        chooser.setDialogTitle("Select Folder");
+        chooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+        chooser.setAcceptAllFileFilterUsed(false);
 
         // CONTENT SECTION =================================================
             this.add(new MainFrame_Attributes());
@@ -40,13 +46,8 @@ public class MainFrame extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == Option_FixItems.button) {
             // Uses JFileChooser to select folders instead of files
-            JFileChooser chooser = new NativeJFileChooser(FileSystemView.getFileSystemView().getHomeDirectory());
-            chooser.setCurrentDirectory(new File("."));
-            chooser.setDialogTitle("Select Folder");
-            chooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
-            chooser.setAcceptAllFileFilterUsed(false);
 
-            if (chooser.showOpenDialog(this) == JFileChooser.APPROVE_OPTION) {
+            if (chooser.showOpenDialog(null) == JFileChooser.APPROVE_OPTION) {
                 Resource_GlobalVariables.selectedFilePath = chooser.getSelectedFile().toString();
                 FixItemsUI.filePathLabel.setText("Selected Path: " + Resource_GlobalVariables.selectedFilePath); // Sets the jlabel value to show the selected file path
                 System_JFrameObjectHandler.changeOpenedJFrame(System_JFrameObjectHandler.JFRAMES.FIX_ITEMS_UI);

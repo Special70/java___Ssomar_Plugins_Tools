@@ -10,7 +10,10 @@ public class ResourceLoader extends Thread {
     public void run() {
         // Adjust UI Looks
         try {
+            // Changes the default setLookAndFeel of javax swing stuff
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+            // Makes tooltips show up instantly when there's one
+            ToolTipManager.sharedInstance().setInitialDelay(0);
         } catch (Exception e) {
             e.printStackTrace();
         }

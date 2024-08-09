@@ -2,6 +2,7 @@ package org.example.global_assets;
 
 import org.example.System_JFrameObjectHandler;
 import org.example.System_JFrameObjectHandler.JFRAMES;
+import org.example.resource_loader_functions.Resource_Images;
 import org.example.resource_loader_functions.Resource_Lang;
 
 import javax.swing.*;
@@ -9,9 +10,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class ConsoleWindow extends JFrame implements ActionListener {
-    private ImageIcon programIcon = new ImageIcon("assets/icon.png");
-    private JLabel headerLabel = GlobalFunctions.createLabel(Resource_Lang.langFile.getProperty("FixItemsUI_ConsoleWindow_headerLabel"), 20);
-    private JButton backButton = new JButton(Resource_Lang.langFile.getProperty("FixItemsUI_ConsoleWindow_backButton"));
+    private ImageIcon programIcon = Resource_Images.getImage("/images/icon.png");
+    private JLabel headerLabel = GlobalFunctions.createLabel(Resource_Lang.langFile.getProperty("ConsoleWindow_headerLabel"), 20);
+    private JButton backButton = new JButton(Resource_Lang.langFile.getProperty("ConsoleWindow_backButton"));
 
     public static void bootConsole() {
         ConsoleWindow_Attributes.consoleWindowOutput.setText(""); // Wipe console

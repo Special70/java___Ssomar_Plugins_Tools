@@ -9,9 +9,9 @@ public class Resource_Images {
     /**
      * @return Image of the program's icon
      */
-    public static ImageIcon getImage() {
+    public static ImageIcon getImage(String fileName) {
         try {
-            InputStream is = Resource_Images.class.getResourceAsStream("/images/icon.png");
+            InputStream is = Resource_Images.class.getResourceAsStream(fileName);
             if (is != null) {
                 BufferedImage image = ImageIO.read(is);
                 ImageIcon imageIcon = new ImageIcon(image);

@@ -5,6 +5,7 @@ import org.example.global_assets.ConsoleWindow;
 import org.example.global_assets.GlobalFunctions;
 import org.example.System_JFrameObjectHandler;
 import org.example.panels.childs_mainframe_fixitems.FixItemsUI_Attributes;
+import org.example.panels.childs_mainframe_fixitems.Selection_Functions;
 import org.example.resource_loader_functions.Resource_Images;
 import org.example.resource_loader_functions.Resource_Lang;
 
@@ -14,7 +15,7 @@ import java.awt.event.ActionListener;
 import java.util.Objects;
 
 public class FixItemsUI extends JFrame implements ActionListener {
-    private ImageIcon programIcon = Resource_Images.getImage();
+    private ImageIcon programIcon = Resource_Images.getImage("/images/icon.png");
     public static JLabel headerLabel = GlobalFunctions.createLabel(Resource_Lang.langFile.getProperty("FixItemsUI_headerLabel"), 20);
     public static JLabel filePathLabel = GlobalFunctions.createLabel("", 20);
     private JButton backButton = new JButton(Resource_Lang.langFile.getProperty("FixItemsUI_Back"));
@@ -63,9 +64,19 @@ public class FixItemsUI extends JFrame implements ActionListener {
         if (Objects.equals(e.getActionCommand(), ActionName.BACK_BUTTON.name())) {
             System_JFrameObjectHandler.changeOpenedJFrame(System_JFrameObjectHandler.JFRAMES.MAIN_FRAME);
         }
+
         else if (Objects.equals(e.getActionCommand(), ActionName.START_BUTTON.name())) {
+            if (!Selection_Functions.hasUserSelectedAnyOptions()) {
+                JOptionPane.showMessageDialog(
+                        null
+                        ,Resource_Lang.langFile.getProperty("FixItemsUI_warningMsg")
+                        ,Resource_Lang.langFile.getProperty("FixItemsUI_warningTitle")
+                        ,JOptionPane.ERROR_MESSAGE
+                );
+                return;
+            }
             // Initiate Warning Message
-            if (JOptionPane.showConfirmDialog(null
+            else if (JOptionPane.showConfirmDialog(null
                     ,Resource_Lang.langFile.getProperty("FixItemsUI_confirmMsg")
                     ,Resource_Lang.langFile.getProperty("FixItemsUI_confirmTitle")
                     ,JOptionPane.YES_NO_OPTION) > 0) {

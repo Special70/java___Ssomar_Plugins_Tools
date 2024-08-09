@@ -4,6 +4,9 @@ import static org.example.System_JFrameObjectHandler.mainObj;
 
 public class Main {
 
+    /**
+     * For action trigger methods, go to {@link org.example.jframes} and its contents
+     */
     public static void main(String[] args) {
         ResourceLoader resourceLoader = new ResourceLoader(); // Run resource loader. AKA setting up backend stuff such as settings
         try {

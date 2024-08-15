@@ -21,7 +21,8 @@ public class Selection_Functions extends JPanel implements ActionListener {
     public static boolean hasUserSelectedAnyOptions() {
         return button_specifyVanillaCommands.isSelected()
                 || button_convertDustCommandsTo_1_20_5.isSelected()
-                || button_convertDustCommandsToPre_1_20_5.isSelected();
+                || button_convertDustCommandsToPre_1_20_5.isSelected()
+                || button_updateOldEIGiveCMD.isSelected();
     }
 
     public Selection_Functions() {

@@ -10,16 +10,14 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileWriter;
 import java.io.InputStream;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 
 /**
  * <h1>WIP : DO NOT FULLY USE YET!</h1>
+ * this shit is hard to remember. needs refactoring
  */
 public class UpdateOldEIGiveCMD {
 
@@ -30,13 +28,6 @@ public class UpdateOldEIGiveCMD {
         );
     }
 
-    /**
-     * How this works: after using a for loop to iterate through the key  to access the child keys,
-     * it will specifically target its child key: "commands" which is the target for the replacement.
-     * For every command line (element of an array), it will count the amount of dust commands found that needs correction.
-     * If no pattern was found, SKIP job. Otherwise, continue.
-     *
-     */
     public static void executeTask() {
 
         // BIG O Formula = number_of_validated_files * number_of_activators (typically 1-5) * number_of_commands (typically 10-200)
@@ -86,7 +77,32 @@ public class UpdateOldEIGiveCMD {
 
                         consoleLog(Resource_Lang.langFile.getProperty("FixItems_Processor_ConvertDustCMDTo_1_20_5_startEditing").replace("%path%", path));
 
+                        for (String foundPattern : foundPatterns) {
+                            String[] patternDetails = foundPattern.split(" ");
+                            System.out.println("Fields: "+ Arrays.toString(patternDetails));
+
+                            // Grabs all mentions of VAR() and USAGE()
+                            for (String elementsOfFoundPattern : patternDetails) {
+
+                                String usageDetails;
+                                String varDetails;
+
+                                if (elementsOfFoundPattern.contains("VAR(")) {
+                                    System.out.println("DETECTED: "+elementsOfFoundPattern);
+                                    varDetails = elementsOfFoundPattern;
+                                } else if (elementsOfFoundPattern.contains("USAGE(")) {
+                                    System.out.println("DETECTED: "+elementsOfFoundPattern);
+                                    usageDetails = elementsOfFoundPattern;
+                                }
+
+
+
+                            }
+
+                        }
+
                         // Start replacing every found pattern
+                        /*
                         for (String foundPattern : foundPatterns) {
 
                             // Store the detected patterns into an array for further use
@@ -116,6 +132,8 @@ public class UpdateOldEIGiveCMD {
                             commandsOfTheActivator.set(iterations, commandsOfTheActivator.get(iterations).replace(foundPattern, newParticleDustCommandFormat));
 
                         }
+
+                         */
 
 
                     }

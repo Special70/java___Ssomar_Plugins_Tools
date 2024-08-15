@@ -1,16 +1,16 @@
 package org.example.back_end_functions;
 
-import org.example.back_end_functions.functions_fixitems_processor.ConvertDustCMDTo_1_20_5;
-import org.example.back_end_functions.functions_fixitems_processor.SpecifyVanillaCommands;
-import org.example.back_end_functions.functions_fixitems_processor.UpdateOldEIGiveCMD;
 import org.example.back_end_functions.functions_fixitems_processor.ValidateFiles;
-import org.example.panels.childs_mainframe_fixitems.Selection_Functions;
+import org.example.back_end_functions.functions_fixitems_processor.sub_functions.ActivatorCommandsReader;
+import org.example.back_end_functions.functions_fixitems_processor.sub_functions.YamlFileLoader;
 import org.example.global_assets.ConsoleWindow_Attributes;
 import org.example.resource_loader_functions.Resource_Lang;
 
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
 /*
 * Runs various steps to fix item configs
@@ -39,20 +39,21 @@ public class FixItems_Processor extends Thread {
             // Validate each file in the target directory to see which ones are valid
             ValidateFiles.executeTask();
 
-            // Start specifying commands with minecraft:
-            if (Selection_Functions.button_specifyVanillaCommands.isSelected()) {
-                SpecifyVanillaCommands.executeTask();
+            for (String validFilePath : validYmlFilePaths) {
+                Map<String, Object> targetYamlFile = YamlFileLoader.getValidFile(validFilePath);
+                ArrayList< List<String> > activatorCommands = ActivatorCommandsReader.executeTask(targetYamlFile);
+
+                for (List<String> commandList : activatorCommands) {
+                    for (String commands : commandList) {
+
+
+
+
+
+
+                    }
+                }
             }
-
-            if (Selection_Functions.button_convertDustCommandsTo_1_20_5.isSelected()) {
-                ConvertDustCMDTo_1_20_5.executeTask();
-            }
-
-            if (Selection_Functions.button_updateOldEIGiveCMD.isSelected()) {
-                UpdateOldEIGiveCMD.executeTask();
-            }
-
-
 
             // Checking runtime duration
             long end = System.currentTimeMillis();
@@ -62,9 +63,5 @@ public class FixItems_Processor extends Thread {
         } catch (Exception e) {
             consoleLog(String.valueOf(e.getStackTrace()));
         }
-
-
-
-
     }
 }

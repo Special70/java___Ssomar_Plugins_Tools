@@ -1,4 +1,4 @@
-package org.example.back_end_functions.functions_fixitems_processor;
+package org.example.back_end_functions.functions_fixitems_processor.instructions;
 
 import org.example.back_end_functions.FixItems_Processor;
 import org.example.global_assets.ConsoleWindow_Attributes;

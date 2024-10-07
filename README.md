@@ -1,5 +1,9 @@
+# Description
+- This jar is meant to be used as a software not a plugin.
+
 # How to run:
-- run Main.java
+- double click the jar file
+- (Main file of the program is Main.java)
 
 # Fonts Used:
 - https://fonts.google.com/share?selection.family=Inter:wght@100..900  

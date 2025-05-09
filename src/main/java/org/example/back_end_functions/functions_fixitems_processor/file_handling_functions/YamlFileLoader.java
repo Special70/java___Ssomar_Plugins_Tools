@@ -1,6 +1,5 @@
-package org.example.back_end_functions.functions_fixitems_processor.sub_functions;
+package org.example.back_end_functions.functions_fixitems_processor.file_handling_functions;
 
-import org.example.back_end_functions.FixItems_Processor;
 import org.yaml.snakeyaml.Yaml;
 
 import java.io.File;

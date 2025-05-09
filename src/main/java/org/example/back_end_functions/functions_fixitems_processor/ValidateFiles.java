@@ -68,7 +68,6 @@ public class ValidateFiles {
 
         } catch (Exception e) {
             consoleLog(Resource_Lang.langFile.getProperty("FixItems_Processor_ValidateFiles_crashMsg"));
-            consoleLog(String.valueOf(e.getStackTrace()));
         }
     }
 }

@@ -3,6 +3,7 @@ package org.example;
 import org.example.jframes.MainFrame;
 import org.example.jframes.childs_mainframe.FixItemsUI;
 import org.example.global_assets.ConsoleWindow;
+import org.example.jframes.childs_mainframe.OtherOptionsUI;
 import org.example.resource_loader_functions.Resource_GlobalVariables;
 
 import javax.swing.*;
@@ -16,6 +17,7 @@ public class System_JFrameObjectHandler {
     public MainFrame mainFrameObj; // Holds the heart of the program. If this object dies somehow, most of the program will
     public FixItemsUI fixItemsUIObj;
     public ConsoleWindow _consoleWindowObj;
+    public OtherOptionsUI otherOptions;
 
     public static System_JFrameObjectHandler mainObj = new System_JFrameObjectHandler(); // Mainly used to be able to create a non-static MainFrame object using SwingUtilities.invokeLater();
 
@@ -27,6 +29,7 @@ public class System_JFrameObjectHandler {
             this.mainFrameObj = new MainFrame();
                 this.fixItemsUIObj = new FixItemsUI();
                 this._consoleWindowObj = new ConsoleWindow();
+                this.otherOptions = new OtherOptionsUI();
         }
         );
     }
@@ -37,6 +40,7 @@ public class System_JFrameObjectHandler {
     public enum JFRAMES {
         MAIN_FRAME,
         FIX_ITEMS_UI,
+        OTHER_OPTIONS_UI,
         CONSOLE_WINDOW
     }
 
@@ -67,6 +71,9 @@ public class System_JFrameObjectHandler {
             }
             case CONSOLE_WINDOW -> {
                 return mainObj._consoleWindowObj;
+            }
+            case OTHER_OPTIONS_UI -> {
+                return mainObj.otherOptions;
             }
             default -> {
                 return mainObj.mainFrameObj;

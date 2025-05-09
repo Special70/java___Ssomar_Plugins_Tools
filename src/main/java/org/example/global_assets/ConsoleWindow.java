@@ -19,6 +19,13 @@ public class ConsoleWindow extends JFrame implements ActionListener {
         System_JFrameObjectHandler.changeOpenedJFrame(JFRAMES.CONSOLE_WINDOW);
     }
 
+    public static void log(String value) {
+        ConsoleWindow_Attributes.consoleWindowOutput.append(value+"\n");
+        ConsoleWindow_Attributes.consoleWindowOutput.setCaretPosition(
+                ConsoleWindow_Attributes.consoleWindowOutput.getDocument().getLength()
+        );
+    }
+
     public ConsoleWindow() {
         this.setSize(1500, 1000);
         this.setTitle("Ssomar Plugins Tools");

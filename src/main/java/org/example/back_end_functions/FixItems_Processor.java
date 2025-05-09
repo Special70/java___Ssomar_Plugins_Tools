@@ -1,9 +1,13 @@
 package org.example.back_end_functions;
 
 import org.example.back_end_functions.functions_fixitems_processor.ValidateFiles;
-import org.example.back_end_functions.functions_fixitems_processor.sub_functions.ActivatorCommandsReader;
-import org.example.back_end_functions.functions_fixitems_processor.sub_functions.YamlFileLoader;
+import org.example.back_end_functions.functions_fixitems_processor.string_modification_functions.ConvertDustCMDTo_1_20_5;
+import org.example.back_end_functions.functions_fixitems_processor.string_modification_functions.SpecifyVanillaCommands;
+import org.example.back_end_functions.functions_fixitems_processor.string_modification_functions.UpdateOldEIGiveCMD;
+import org.example.back_end_functions.functions_fixitems_processor.file_handling_functions.ActivatorCommandsReader;
+import org.example.back_end_functions.functions_fixitems_processor.file_handling_functions.YamlFileLoader;
 import org.example.global_assets.ConsoleWindow_Attributes;
+import org.example.panels.childs_mainframe_fixitems.Selection_Functions;
 import org.example.resource_loader_functions.Resource_Lang;
 
 import java.text.DecimalFormat;
@@ -39,21 +43,28 @@ public class FixItems_Processor extends Thread {
             // Validate each file in the target directory to see which ones are valid
             ValidateFiles.executeTask();
 
+            SpecifyVanillaCommands.executeTask();
+            /*
             for (String validFilePath : validYmlFilePaths) {
-                Map<String, Object> targetYamlFile = YamlFileLoader.getValidFile(validFilePath);
-                ArrayList< List<String> > activatorCommands = ActivatorCommandsReader.executeTask(targetYamlFile);
+                Map<String, Object> targetYamlFile = YamlFileLoader.getValidFile(validFilePath); // Loads the YAML File
+                ArrayList< List<String> > activatorCommands = ActivatorCommandsReader.executeTask(targetYamlFile); // ArrayList that contains lists that has commands per activator
 
                 for (List<String> commandList : activatorCommands) {
-                    for (String commands : commandList) {
+                    for (String command : commandList) {
 
-
-
-
-
+                        if (Selection_Functions.button_updateOldEIGiveCMD.isSelected()) {
+                            UpdateOldEIGiveCMD.executeTask(command);
+                        }
 
                     }
                 }
+
+
+
+
             }
+             */
+            ConvertDustCMDTo_1_20_5.executeTask();
 
             // Checking runtime duration
             long end = System.currentTimeMillis();
@@ -61,7 +72,7 @@ public class FixItems_Processor extends Thread {
             consoleLog("TASK DURATION: "+ formatter.format((end - start) / 1000d) + " seconds");
 
         } catch (Exception e) {
-            consoleLog(String.valueOf(e.getStackTrace()));
+            consoleLog(String.valueOf(e.toString()));
         }
     }
 }

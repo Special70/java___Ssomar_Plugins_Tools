@@ -1,4 +1,4 @@
-package org.example.back_end_functions.functions_fixitems_processor.sub_functions;
+package org.example.back_end_functions.functions_fixitems_processor.file_handling_functions;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,7 +9,7 @@ public class ActivatorCommandsReader {
 
         Map<String, Object> activators = (Map<String, Object>) yamlFile.get("activators"); // Grabs all child keys from the "activator" key
 
-        ArrayList< List<String> > listOfCommands = null; // Contains List<String> objects that contain the commands that are to-be-edited
+        ArrayList< List<String> > listOfCommands = new ArrayList<>(); // Contains List<String> objects that contain the commands that are to-be-edited
 
         for (Map.Entry<String, Object> foundActivators : activators.entrySet()) {
             Map<String, Object> targetActivator = (Map<String, Object>) activators.get(foundActivators.getKey()); // saves the child object in a variable

@@ -1,4 +1,4 @@
-package org.example.back_end_functions.functions_fixitems_processor.instructions;
+package org.example.back_end_functions.functions_fixitems_processor.string_modification_functions;
 
 import org.example.back_end_functions.FixItems_Processor;
 import org.example.global_assets.ConsoleWindow_Attributes;
@@ -41,7 +41,7 @@ public class ConvertDustCMDTo_1_20_5 {
             for (String path : FixItems_Processor.validYmlFilePaths) {
 
                 // Reading yml files and saving it in a Map
-                InputStream inputStream = new FileInputStream(new File(path));
+                InputStream inputStream = new FileInputStream(path);
                 Yaml yaml = new Yaml();
                 Map<String, Object> loadedYMLFile = yaml.load(inputStream);
                 // Done reading the entire file and loading it as YML

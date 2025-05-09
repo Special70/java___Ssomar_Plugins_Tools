@@ -29,6 +29,7 @@ public class MainFrame_Attributes extends JPanel {
         contentPanel.setLayout(new GridLayout(3, 1, 40, 40));
             // ===================================================================
             contentPanel.add(new Option_FixItems());
+            contentPanel.add(new Option_OtherUtilities());
             // ===================================================================
         this.add(contentPanel, BorderLayout.CENTER);
 

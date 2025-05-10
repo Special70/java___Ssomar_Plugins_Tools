@@ -1,3 +1,0 @@
-Dependencies:  
-- pyqt5  
-- pyqt5-tools  

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.sptools.controllers.MainPageController">
+   <children>
+      <Label layoutX="163.0" layoutY="51.0" text="Ssomar Plugins Tools">
+         <font>
+            <Font name="Bookman Old Style" size="26.0" />
+         </font>
+      </Label>
+      <Button fx:id="itemConfigFixerButton" layoutX="247.0" layoutY="116.0" mnemonicParsing="false" text="Item Config Fixer" />
+   </children>
+</AnchorPane>

@@ -10,7 +10,6 @@ import org.sptools.ssomar_plugins_tools.controllers.MainPageController;
 import org.sptools.ssomar_plugins_tools.lib.LibClass;
 import org.sptools.ssomar_plugins_tools.startup.SettingsStartup;
 
-import javax.swing.*;
 import java.io.File;
 import java.io.IOException;
 import java.net.URISyntaxException;
@@ -42,15 +41,6 @@ public class Main extends Application {
     }
 
     public static void main(String[] args) {
-        /*
-        try {
-            File jarFile = new File(Main.class.getProtectionDomain().getCodeSource().getLocation().toURI());
-            System.out.println("JAR file location: " + jarFile.getAbsolutePath());
-        } catch (URISyntaxException e) {
-            e.printStackTrace();
-        }
-        */
-
         launch();
     }
 }

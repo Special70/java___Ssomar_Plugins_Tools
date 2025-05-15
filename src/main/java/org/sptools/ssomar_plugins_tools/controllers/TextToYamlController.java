@@ -32,8 +32,8 @@ public class TextToYamlController implements Initializable {
     public void initialize(URL arg0, ResourceBundle arg1) {
         // attempt to create a file for read write purposes
         try {
-            File jarFile = new File(Main.class.getProtectionDomain().getCodeSource().getLocation().toURI());
-            System.out.println("Create Text File at: " + jarFile.getAbsolutePath());
+            File textfileEnv = new File(String.valueOf(Main.class.getProtectionDomain().getCodeSource().getLocation().toURI())+"tempfile.yml");
+            System.out.println("Create Text File at: " + textfileEnv.getAbsolutePath());
         } catch (URISyntaxException e) {
             e.printStackTrace();
         }

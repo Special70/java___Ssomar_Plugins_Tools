@@ -1,0 +1,17 @@
+* {
+    -fx-font-family: 'Minecraft Regular';
+}
+.check-box {
+    -fx-font-family: "Minecraft Regular";
+    -fx-font-size: 15px;
+}
+
+.choice-box {
+    -fx-font-family: "Minecraft Regular";
+    -fx-font-size: 15px;
+}
+
+.button {
+    -fx-font-family: "Minecraft Regular";
+    -fx-font-size: 15px;
+}

@@ -3,15 +3,22 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.sptools.controllers.MainPageController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.sptools.ssomar_plugins_tools.controllers.MainPageController">
    <children>
-      <Label layoutX="163.0" layoutY="51.0" text="Ssomar Plugins Tools">
-         <font>
-            <Font name="Bookman Old Style" size="26.0" />
-         </font>
-      </Label>
-      <Button fx:id="itemConfigFixerButton" layoutX="247.0" layoutY="116.0" mnemonicParsing="false" text="Item Config Fixer" />
+      <VBox alignment="CENTER" layoutX="2.0" layoutY="-18.0" prefHeight="400.0" prefWidth="600.0" spacing="30.0" AnchorPane.bottomAnchor="81.0">
+         <children>
+            <Label text="Ssomar Plugins Tools" textAlignment="CENTER">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <Button fx:id="configFixerButton" mnemonicParsing="false" onAction="#openFolderPrompt" text="Config Fixer" />
+            <Button fx:id="textToYamlButton" mnemonicParsing="false" onAction="#openTextToYamlConverter" text="Text to YAML" />
+            <Button fx:id="cmdConverterFixerButton" mnemonicParsing="false" text="Command Converter/Fixer" />
+         </children>
+      </VBox>
    </children>
 </AnchorPane>

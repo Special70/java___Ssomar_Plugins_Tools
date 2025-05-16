@@ -8,6 +8,7 @@ public class LibClass {
     public final String mainPage = "/scenes/MainPage.fxml";
     public final String configFixerController = "/scenes/Selection_ConfigFixer.fxml";
     public final String textToYaml = "/scenes/Selection_TextToYaml.fxml";
+    public final String consoleWindow = "/scenes/ConsoleWindow.fxml";
 
 
     public final String appIcon = "/assets/images/app_icon.png";

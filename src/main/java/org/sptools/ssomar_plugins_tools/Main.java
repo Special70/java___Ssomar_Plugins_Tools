@@ -34,8 +34,6 @@ public class Main extends Application {
         Scene scene = new Scene(mainPageLoader.load());
         scene.getStylesheets().add(this.getClass().getResource(libClass.mainPageCss).toExternalForm());
 
-        // controllers
-
         // stage
         stage.getIcons().add(new Image(getClass().getResourceAsStream(libClass.appIcon)));
         stage.setTitle("Ssomar Plugins Tools");

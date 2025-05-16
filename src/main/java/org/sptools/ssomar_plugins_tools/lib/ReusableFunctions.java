@@ -32,6 +32,8 @@ public class ReusableFunctions {
 
         applyCSS(scene, classArg, filePath);
 
+        if (filePath.equals(libClass.))
+
 
         stage.setScene(scene);
         stage.show();

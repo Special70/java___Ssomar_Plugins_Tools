@@ -1,27 +1,42 @@
 package org.sptools.ssomar_plugins_tools.controllers;
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TextArea;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
+import javafx.stage.Window;
 import org.sptools.ssomar_plugins_tools.Main;
 import org.sptools.ssomar_plugins_tools.lib.LibClass;
 import org.sptools.ssomar_plugins_tools.lib.ReusableFunctions;
+import org.sptools.ssomar_plugins_tools.lib.functions.YamlFileLoader;
 
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.net.URL;
+import java.util.Map;
 import java.util.ResourceBundle;
 
 public class TextToYamlController implements Initializable {
     LibClass libClass = new LibClass();
 
-    @FXML
-    TextArea userInput;
+    Stage stage;
 
     @FXML
-    TextArea outputField;
+    public TextArea userInput;
+    @FXML
+    public TextArea outputField;
+    @FXML
+    public AnchorPane rootPane;
+
+    FileWriter writer;
+    Map<String, Object> yamlFile;
+    File file;
+
 
     @FXML
     public void backToMainPage(ActionEvent event) throws IOException {
@@ -30,12 +45,47 @@ public class TextToYamlController implements Initializable {
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
-        // attempt to create a file for read write purposes
-        try {
-            File textfileEnv = new File(String.valueOf(Main.class.getProtectionDomain().getCodeSource().getLocation().toURI())+"tempfile.yml");
-            System.out.println("Create Text File at: " + textfileEnv.getAbsolutePath());
-        } catch (URISyntaxException e) {
-            e.printStackTrace();
-        }
+        Platform.runLater(() -> {
+            this.stage = ReusableFunctions.getStage(userInput);
+        });
+        userInput.textProperty().addListener((obs, oldText, newText) -> {
+            String[] lines = newText.split("\\R"); // splits on any line break
+            StringBuilder yamlBuilder = new StringBuilder();
+            yamlBuilder.append("    commands:\n");
+            for (String line : lines) {
+                if (!line.isBlank()) {
+                    yamlBuilder.append("    - ").append(quoteIfNeeded(line)).append("\n");
+                }
+            }
+            outputField.setText(yamlBuilder.toString());
+        });
+
+
     }
+
+    // Helper function to add quotes when needed
+    private String quoteIfNeeded(String value) {
+        // YAML quoting is needed if:
+        // - the string contains special characters
+        // - starts with `@`, `&`, `*`, `!`, `?`, `-`, etc.
+        // - contains `:`, `#`, `{`, `}`, `[`, `]`, `,`, `|`, `>`, etc.
+        // - contains whitespace or line breaks
+        // - or matches boolean/null/numeric keywords like true, false, null, 123
+
+        boolean needsQuoting = value.matches(".*[\\s:#\\[\\]\\{\\},&*!|>'\"%@`].*")
+                || value.equalsIgnoreCase("null")
+                || value.equalsIgnoreCase("true")
+                || value.equalsIgnoreCase("false")
+                || value.matches("^[0-9]+$");
+
+        if (needsQuoting) {
+            // Escape any single quotes by doubling them (YAML rule)
+            String escaped = value.replace("'", "''");
+            return "'" + escaped + "'";
+        }
+
+        return value;
+    }
+
+
 }

@@ -1,8 +1,10 @@
 package org.sptools.ssomar_plugins_tools.controllers;
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -12,14 +14,18 @@ import javafx.stage.DirectoryChooser;
 import javafx.stage.FileChooser;
 import javafx.stage.FileChooser.ExtensionFilter;
 import javafx.stage.Stage;
+import javafx.stage.Window;
+import org.sptools.ssomar_plugins_tools.Main;
 import org.sptools.ssomar_plugins_tools.lib.LibClass;
 import org.sptools.ssomar_plugins_tools.lib.ReusableFunctions;
 
 import javax.swing.*;
 import java.io.File;
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-public class MainPageController {
+public class MainPageController implements Initializable {
     LibClass libClass = new LibClass();
 
     @FXML
@@ -31,9 +37,7 @@ public class MainPageController {
     public Button cmdConverterFixerButton;
     public Button textToYamlButton;
 
-    public void setStage(Stage stage) {
-        this.stage = stage;
-    }
+
 
     @FXML
     public void openFolderPrompt(ActionEvent event) throws IOException {
@@ -59,10 +63,15 @@ public class MainPageController {
 
     @FXML
     public void openTextToYamlConverter(ActionEvent event) throws IOException {
+
         ReusableFunctions.switchMenu(event, getClass(), libClass.textToYaml);
     }
 
 
-
-
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        Platform.runLater(() -> {
+            this.stage = ReusableFunctions.getStage(configFixerButton);
+        });
+    }
 }

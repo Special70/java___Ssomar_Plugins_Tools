@@ -14,4 +14,5 @@ public class LibClass {
 
     public final String mainPageCss = "/css/MainPageCSS.css";
     public final String configFixerControllerCss = "/css/ConfigFixerController.css";
+    public final String textToYamlCss = "/css/TextToYamlController.css";
 }

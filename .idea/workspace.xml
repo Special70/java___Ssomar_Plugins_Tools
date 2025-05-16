@@ -5,9 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e0568a24-c97e-427f-bc37-0e1d1e200921" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/lib/functions/YamlFileLoader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/lib/functions/YamlFileSaver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/job_resources/minecraft_cmds.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/controllers/MainPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/controllers/MainPageController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/controllers/TextToYamlController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/controllers/TextToYamlController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/lib/LibClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/lib/LibClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/lib/ReusableFunctions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/lib/ReusableFunctions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/css/ConfigFixerController.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/css/ConfigFixerController.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/scenes/Selection_TextToYaml.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/scenes/Selection_TextToYaml.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,18 +35,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Special70"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Special70&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Special70/java___Ssomar_Plugins_Tools.git",
-    "accountId": "b224bb2c-99dd-4d7e-85b2-75d0eaf95aeb"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Special70/java___Ssomar_Plugins_Tools.git&quot;,
+    &quot;accountId&quot;: &quot;b224bb2c-99dd-4d7e-85b2-75d0eaf95aeb&quot;
   }
-}]]></component>
+}</component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>

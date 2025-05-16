@@ -5,7 +5,9 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Control;
 import javafx.stage.Stage;
+import javafx.stage.Window;
 
 import java.io.IOException;
 
@@ -42,6 +44,15 @@ public class ReusableFunctions {
         if (filePath.equals(libClass.mainPage)) scene.getStylesheets().add(classArg.getResource(libClass.mainPageCss).toExternalForm());
         else if (filePath.equals(libClass.configFixerController)) scene.getStylesheets().add(classArg.getResource(libClass.configFixerControllerCss).toExternalForm());
 
+    }
 
+    /**
+     * Uses the provided Control variable to find a way to get the current stage.
+     * Must be used with "Platform.runLater(() -> {})"
+     */
+    public static Stage getStage(Control controlArg) {
+        if (controlArg.getScene() == null) return null;
+        Window window = controlArg.getScene().getWindow();
+        return (window instanceof Stage) ? (Stage) window : null;
     }
 }

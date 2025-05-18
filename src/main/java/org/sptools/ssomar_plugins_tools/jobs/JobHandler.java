@@ -12,13 +12,16 @@ public class JobHandler {
 
     private static LibClass libClass = new LibClass();
 
-    TextArea outputArea;
+    /**
+     * External classes have to be the one to modify this value so the JobClass class would know which
+     * instance of the Control object needs to be touched to apply changes to the console.
+     */
+    public static TextArea outputFieldPointer;
 
     public static void start(String[] params) throws IOException {
 
         Thread thread = new Thread(()->{
-            //controller.outputScreen.appendText("wuwa");
-
+            outputFieldPointer.appendText("test");
         });
         thread.setDaemon(true);
         thread.start();

@@ -5,19 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e0568a24-c97e-427f-bc37-0e1d1e200921" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/controllers/ConsoleWindowController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/jobs/JobHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/jobs/Job_ApplyMinecraftToCommands.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/jobs/Job_DowngradeParticleCommands.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/jobs/Job_UpgradeParticleCommands.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/system/SystemVariables.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/scenes/ConsoleWindow.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/controllers/ConfigFixerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/controllers/ConfigFixerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/lib/LibClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/lib/LibClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/controllers/ConsoleWindowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/controllers/ConsoleWindowController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/controllers/MainPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/controllers/MainPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/controllers/TextToYamlController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/controllers/TextToYamlController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/jobs/JobHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/jobs/JobHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/jobs/Job_ApplyMinecraftToCommands.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/jobs/Job_ApplyMinecraftToCommands.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/lib/ReusableFunctions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/lib/ReusableFunctions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/lib/functions/YamlFileLoader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/lib/functions/YamlFileSaver.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/startup/SettingsStartup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/startup/SettingsStartup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/system/SystemVariables.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/system/SystemVariables.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/scenes/Selection_ConfigFixer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/scenes/Selection_ConfigFixer.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

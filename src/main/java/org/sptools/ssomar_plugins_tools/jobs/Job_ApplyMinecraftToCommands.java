@@ -8,4 +8,12 @@ public class Job_ApplyMinecraftToCommands {
         thread.setDaemon(true);
         thread.start();
     }
+
+    /**
+     * Developer note: I don't feel like writing dozens of code lines
+     * inside of a curly brace.
+     */
+    private void run() {
+
+    }
 }

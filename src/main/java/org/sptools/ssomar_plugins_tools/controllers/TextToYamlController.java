@@ -11,7 +11,6 @@ import javafx.stage.Window;
 import org.sptools.ssomar_plugins_tools.Main;
 import org.sptools.ssomar_plugins_tools.lib.LibClass;
 import org.sptools.ssomar_plugins_tools.lib.ReusableFunctions;
-import org.sptools.ssomar_plugins_tools.lib.functions.YamlFileLoader;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -33,11 +32,9 @@ public class TextToYamlController implements Initializable {
     @FXML
     public AnchorPane rootPane;
 
-    FileWriter writer;
-    Map<String, Object> yamlFile;
-    File file;
-
-
+    /**
+     * Returns the user back ot the main page
+     */
     @FXML
     public void backToMainPage(ActionEvent event) throws IOException {
         ReusableFunctions.switchMenu(event, getClass(), libClass.mainPage);
@@ -63,7 +60,11 @@ public class TextToYamlController implements Initializable {
 
     }
 
-    // Helper function to add quotes when needed
+    /**
+     * Checks if the input requires to be surrounded in quotes or not.
+     * YAML has issues with specific characters, and we can't expect everyone
+     * to know where to put the quote symbols exactly.
+     */
     private String quoteIfNeeded(String value) {
         // YAML quoting is needed if:
         // - the string contains special characters

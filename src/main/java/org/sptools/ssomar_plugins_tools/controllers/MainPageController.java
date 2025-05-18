@@ -38,7 +38,10 @@ public class MainPageController implements Initializable {
     public Button textToYamlButton;
 
 
-
+    /**
+     * Opens the folder for the user to select which folder contains the items
+     * the user wishes to fix
+     */
     @FXML
     public void openFolderPrompt(ActionEvent event) throws IOException {
         DirectoryChooser directoryChooser = new DirectoryChooser();
@@ -61,9 +64,13 @@ public class MainPageController implements Initializable {
         }
     }
 
+    /**
+     * Opens the menu that converts provided text to yaml format.
+     * Why does this option exist? Sometimes people paste things from MCStacker
+     * and when they reload the plugin, the .yml file breaks due to syntax error.
+     */
     @FXML
     public void openTextToYamlConverter(ActionEvent event) throws IOException {
-
         ReusableFunctions.switchMenu(event, getClass(), libClass.textToYaml);
     }
 

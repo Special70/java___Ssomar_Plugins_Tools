@@ -7,6 +7,9 @@ import org.sptools.ssomar_plugins_tools.lib.ReusableFunctions;
 
 public class SettingsStartup {
 
+    /**
+     * Any code that needs to be executed before the program starts is written here.
+     */
     public SettingsStartup() {
 
         Font.loadFont(getClass().getResourceAsStream("/fonts/MinecraftRegular-Bmg3.otf"), 12);

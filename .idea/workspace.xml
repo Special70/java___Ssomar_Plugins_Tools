@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e0568a24-c97e-427f-bc37-0e1d1e200921" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/jobs/JobHelper_AccessCommands.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/jobs/operations/Job_ApplyMinecraftToCommands.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/lib/functions/ValidateYMLFiles.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/lib/functions/YamlFileLoader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/lib/functions/YamlFileSaver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/controllers/ConfigFixerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/controllers/ConfigFixerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/controllers/ConsoleWindowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/controllers/ConsoleWindowController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/controllers/MainPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/controllers/MainPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/controllers/TextToYamlController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/controllers/TextToYamlController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/jobs/JobHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/jobs/JobHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/jobs/Job_ApplyMinecraftToCommands.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/jobs/Job_DowngradeParticleCommands.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/jobs/operations/Job_DowngradeParticleCommands.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/jobs/Job_UpgradeParticleCommands.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/jobs/operations/Job_UpgradeParticleCommands.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/lib/ReusableFunctions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/lib/ReusableFunctions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/system/SystemVariables.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/system/SystemVariables.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/scenes/ConsoleWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/scenes/ConsoleWindow.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/scenes/MainPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/scenes/MainPage.fxml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="FxmlFile" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Special70&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Special70/java___Ssomar_Plugins_Tools.git&quot;,
+    &quot;accountId&quot;: &quot;b224bb2c-99dd-4d7e-85b2-75d0eaf95aeb&quot;
+  }
+}</component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2x79G0muLYhjngnFRdn47WYCwls" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Application.HelloApplication.executor": "Run",
+    "Application.Main.executor": "Run",
+    "Application.Unnamed.executor": "Run",
+    "Maven.Ssomar_Plugins_Tools [org.apache.maven.plugins:maven-clean-plugin:2.5:clean].executor": "Run",
+    "Maven.Ssomar_Plugins_Tools [org.apache.maven.plugins:maven-jar-plugin:2.4:jar].executor": "Run",
+    "Maven.Ssomar_Plugins_Tools [org.openjfx:javafx-maven-plugin:0.0.8:run].executor": "Run",
+    "Maven.Ssomar_Plugins_Tools [package].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "javafx-dev",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "E:/Razer/Documents/GitHub/Ssomar_Plugins_Tools/src/main/resources/fonts",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.5827586",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Razer\Documents\GitHub\Ssomar_Plugins_Tools\src\main\resources\fonts" />
+      <recent name="E:\Razer\Documents\GitHub\Ssomar_Plugins_Tools\src\main\resources\org\sptools\ssomar_plugins_tools" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Razer\Documents\GitHub\Ssomar_Plugins_Tools\src\main\resources\" />
+      <recent name="E:\Razer\Documents\GitHub\Ssomar_Plugins_Tools\src\main\resources\assets\images" />
+      <recent name="E:\Razer\Documents\GitHub\Ssomar_Plugins_Tools\src\main\resources\org\sptools\ssomar_plugins_tools" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Application" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.sptools.ssomar_plugins_tools.Application" />
+      <module name="Ssomar_Plugins_Tools" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.sptools.ssomar_plugins_tools.Main" />
+      <module name="Ssomar_Plugins_Tools" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.sptools.ssomar_plugins_tools.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e0568a24-c97e-427f-bc37-0e1d1e200921" name="Changes" comment="" />
+      <created>1747278146159</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1747278146159</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>

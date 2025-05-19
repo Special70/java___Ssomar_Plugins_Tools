@@ -1,0 +1,11 @@
+* {
+    -fx-font-family: 'Minecraft Regular';
+}
+
+.label {
+    -fx-font-size: 30px;
+}
+
+.button {
+    -fx-font-size: 20px;
+}

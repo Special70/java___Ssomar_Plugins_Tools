@@ -42,6 +42,6 @@ public class ConsoleWindowController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        JobHandler.outputFieldPointer = this.outputScreen;
+        SystemVariables.outputFieldPointer = this.outputScreen;
     }
 }

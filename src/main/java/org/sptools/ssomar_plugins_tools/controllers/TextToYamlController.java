@@ -7,17 +7,11 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.TextArea;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-import javafx.stage.Window;
-import org.sptools.ssomar_plugins_tools.Main;
 import org.sptools.ssomar_plugins_tools.lib.LibClass;
 import org.sptools.ssomar_plugins_tools.lib.ReusableFunctions;
 
-import java.io.File;
-import java.io.FileWriter;
 import java.io.IOException;
-import java.net.URISyntaxException;
 import java.net.URL;
-import java.util.Map;
 import java.util.ResourceBundle;
 
 public class TextToYamlController implements Initializable {

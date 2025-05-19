@@ -1,5 +1,6 @@
 package org.sptools.ssomar_plugins_tools.lib;
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -8,6 +9,8 @@ import javafx.scene.Scene;
 import javafx.scene.control.Control;
 import javafx.stage.Stage;
 import javafx.stage.Window;
+import org.sptools.ssomar_plugins_tools.jobs.JobHandler;
+import org.sptools.ssomar_plugins_tools.system.SystemVariables;
 
 import java.io.IOException;
 
@@ -55,5 +58,14 @@ public class ReusableFunctions {
         if (controlArg.getScene() == null) return null;
         Window window = controlArg.getScene().getWindow();
         return (window instanceof Stage) ? (Stage) window : null;
+    }
+
+    /**
+     * Any string that you pass to this function gets added to the ConsoleWindow scene
+     */
+    public static void writeToConsole(String value) {
+        Platform.runLater(() -> {
+            SystemVariables.outputFieldPointer.appendText(value + "\n");
+        });
     }
 }

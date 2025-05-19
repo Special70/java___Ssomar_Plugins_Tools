@@ -3,14 +3,9 @@ package org.sptools.ssomar_plugins_tools.controllers;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.control.CheckBox;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.Label;
-import javafx.scene.text.Font;
-import javafx.stage.Stage;
+import javafx.scene.control.*;
 import org.sptools.ssomar_plugins_tools.jobs.JobHandler;
+import org.sptools.ssomar_plugins_tools.jobs.operations.Job_ApplyMinecraftToCommands;
 import org.sptools.ssomar_plugins_tools.lib.LibClass;
 import org.sptools.ssomar_plugins_tools.lib.ReusableFunctions;
 import org.sptools.ssomar_plugins_tools.system.SystemVariables;
@@ -26,20 +21,17 @@ import java.util.ResourceBundle;
 public class ConfigFixerController implements Initializable {
     LibClass libClass = new LibClass();
 
-    private Stage stage;
-    private Scene scene;
-    private Parent root;
 
     /**
      * Checkbox to the first option in the ConfigFixer UI. If enabled, it will perform
-     * the tasks written at {@link org.sptools.ssomar_plugins_tools.jobs.Job_ApplyMinecraftToCommands}
+     * the tasks written at {@link Job_ApplyMinecraftToCommands}
      */
     @FXML
     public CheckBox choice1;
 
     /**
      * Checkbox to the first option in the ConfigFixer UI. If enabled, it will perform
-     * the tasks written at {@link org.sptools.ssomar_plugins_tools.jobs.Job_ApplyMinecraftToCommands}.
+     * the tasks written at {@link Job_ApplyMinecraftToCommands}.
      * (The user still needs to specify between the two choices written at {@link ConfigFixerController#choice2_1})
      */
     @FXML
@@ -59,22 +51,15 @@ public class ConfigFixerController implements Initializable {
 
     /**
      * Once a folder is selected during the MainPage, it will be displayed here.<br/>
-     * Edited by {@link ConfigFixerController#setDirectoryLabel(String)}
+     * Reference: {@link SystemVariables#selectedDirectory}
      */
     @FXML
     private Label directoryLabel;
 
-    /**
-     * Modifies the Control label so the user would know what folder
-     * got selected.
-     */
-    public void setDirectoryLabel(String path) {
-        directoryLabel.setText(path);
-    }
-
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
+        this.directoryLabel.setText(SystemVariables.selectedDirectory);
         choice2_1.getItems().addAll(particleCmdConversionChoices);
     }
 
@@ -91,7 +76,7 @@ public class ConfigFixerController implements Initializable {
      */
     @FXML
     public void startJob(ActionEvent event) throws IOException {
-        SystemVariables.previousMenuPath = libClass.configFixerController;
+
 
         // start building the info to pass to JobHandler.start()
         // so it knows what jobs to perform
@@ -101,8 +86,28 @@ public class ConfigFixerController implements Initializable {
         if (choice2.isSelected() && choice2_1.getValue().equals("Upgrade all particle commands to 1.13+")) paramBuilder.add("job-2.0");
         if (choice2.isSelected() && choice2_1.getValue().equals("Downgrade all 1.13+ particle commands")) paramBuilder.add("job-2.1");
 
-        ReusableFunctions.switchMenu(event, getClass(), libClass.consoleWindow);
-        JobHandler.start(paramBuilder.toArray(new String[paramBuilder.size()]));
+        if (paramBuilder.isEmpty()) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Cannot start jobs.");
+            alert.setHeaderText("You have yet to select even at least one job option.");
+            alert.showAndWait();
+        } else {
+
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setTitle("Do you want to start?");
+            alert.setHeaderText("The software is about to modify the .yml item configs in the target folder.");
+            alert.setContentText("Please make a backup of the item configs if needed.");
+
+            if (alert.showAndWait().get() == ButtonType.OK) {
+
+                SystemVariables.previousMenuPath = libClass.configFixerController;
+
+                ReusableFunctions.switchMenu(event, getClass(), libClass.consoleWindow);
+                JobHandler.start(paramBuilder);
+            }
+        }
+
+
 
     }
 }

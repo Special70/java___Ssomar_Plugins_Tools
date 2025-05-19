@@ -17,7 +17,6 @@
             </Label>
             <Button fx:id="configFixerButton" mnemonicParsing="false" onAction="#openFolderPrompt" text="Config Fixer" />
             <Button fx:id="textToYamlButton" mnemonicParsing="false" onAction="#openTextToYamlConverter" text="Text to YAML" />
-            <Button fx:id="cmdConverterFixerButton" mnemonicParsing="false" text="Command Converter/Fixer" />
          </children>
       </VBox>
    </children>

@@ -17,7 +17,7 @@
                   <Font size="23.0" />
                </font>
             </Label>
-            <TextArea fx:id="outputScreen" prefHeight="200.0" prefWidth="200.0">
+            <TextArea fx:id="outputScreen" prefHeight="200.0" prefWidth="200.0" wrapText="true" VBox.vgrow="ALWAYS">
                <VBox.margin>
                   <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
                </VBox.margin>

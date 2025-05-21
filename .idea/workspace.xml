@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e0568a24-c97e-427f-bc37-0e1d1e200921" name="Changes" comment="" />
+    <list default="true" id="e0568a24-c97e-427f-bc37-0e1d1e200921" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dependency-reduced-pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dependency-reduced-pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/jobs/JobHelper_AccessCommands.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/jobs/JobHelper_AccessCommands.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/jobs/operations/Job_ApplyMinecraftToCommands.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/jobs/operations/Job_ApplyMinecraftToCommands.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/jobs/operations/Job_DowngradeParticleCommands.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/jobs/operations/Job_DowngradeParticleCommands.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/jobs/operations/Job_UpgradeParticleCommands.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/jobs/operations/Job_UpgradeParticleCommands.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/scenes/Selection_ConfigFixer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/scenes/Selection_ConfigFixer.fxml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -58,11 +67,14 @@
     "Application.Main.executor": "Run",
     "Application.Unnamed.executor": "Run",
     "Maven.Ssomar_Plugins_Tools [clean].executor": "Run",
+    "Maven.Ssomar_Plugins_Tools [deploy].executor": "Run",
     "Maven.Ssomar_Plugins_Tools [install].executor": "Run",
     "Maven.Ssomar_Plugins_Tools [org.apache.maven.plugins:maven-clean-plugin:2.5:clean].executor": "Run",
     "Maven.Ssomar_Plugins_Tools [org.apache.maven.plugins:maven-jar-plugin:2.4:jar].executor": "Run",
+    "Maven.Ssomar_Plugins_Tools [org.apache.maven.plugins:maven-javadoc-plugin:3.11.2:javadoc].executor": "Run",
     "Maven.Ssomar_Plugins_Tools [org.openjfx:javafx-maven-plugin:0.0.8:run].executor": "Run",
     "Maven.Ssomar_Plugins_Tools [package].executor": "Run",
+    "Maven.Ssomar_Plugins_Tools [validate].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "javafx-dev",

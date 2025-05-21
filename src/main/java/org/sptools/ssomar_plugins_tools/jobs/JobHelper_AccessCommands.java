@@ -1,6 +1,8 @@
 package org.sptools.ssomar_plugins_tools.jobs;
 
 import org.sptools.ssomar_plugins_tools.jobs.operations.Job_ApplyMinecraftToCommands;
+import org.sptools.ssomar_plugins_tools.jobs.operations.Job_DowngradeParticleCommands;
+import org.sptools.ssomar_plugins_tools.jobs.operations.Job_UpgradeParticleCommands;
 import org.sptools.ssomar_plugins_tools.lib.ReusableFunctions;
 import org.sptools.ssomar_plugins_tools.lib.functions.YamlFileLoader;
 import org.sptools.ssomar_plugins_tools.lib.functions.YamlFileSaver;
@@ -85,6 +87,12 @@ public class JobHelper_AccessCommands {
 
         if (paramJobs.contains("job-1.0")) {
             new Job_ApplyMinecraftToCommands(playerCommands, entityCommands, targetCommands, blockCommands);
+        }
+        if (paramJobs.contains("job-2.0")) {
+            new Job_UpgradeParticleCommands(playerCommands, entityCommands, targetCommands, blockCommands);
+        }
+        if (paramJobs.contains("job-2.1")) {
+            new Job_DowngradeParticleCommands(playerCommands, entityCommands, targetCommands, blockCommands);
         }
 
     }

@@ -18,6 +18,8 @@ public class Job_ApplyMinecraftToCommands {
      */
     public Job_ApplyMinecraftToCommands(List<String> playerCommands, List<String> entityCommands, List<String> targetCommands, List<String> blockCommands) {
 
+        ReusableFunctions.writeToConsole("Performing Job: ApplyMinecraftToCommands");
+
         if (playerCommands != null) {
             for (int iteration = 0; iteration < playerCommands.size(); iteration++) {
                 run(iteration, playerCommands);
@@ -87,7 +89,7 @@ public class Job_ApplyMinecraftToCommands {
         // Applies the changes to the target command
         listArg.set(cmdLineIdx, String.valueOf(strBuilder));
 
-        ReusableFunctions.writeToConsole(("    Applied changes to "+signedCommands+" commands."));
+        ReusableFunctions.writeToConsole(("    Applied "+signedCommands+" word changes to this command."));
 
     }
 

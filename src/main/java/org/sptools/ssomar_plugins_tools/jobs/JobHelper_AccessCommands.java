@@ -63,7 +63,7 @@ public class JobHelper_AccessCommands {
             // iterates through its child objects
             for (Map.Entry<String, Object> foundActivators : activators.entrySet()) {
                 ReusableFunctions.writeToConsole(("  Traversing to activator: "+foundActivators.getKey()));
-                run2(foundActivators, activators);
+                accessActivatorCommands(foundActivators, activators);
             }
 
             ReusableFunctions.writeToConsole("Start saving changes");
@@ -78,7 +78,7 @@ public class JobHelper_AccessCommands {
      *
      * To perform the job, each command line will be separated via whitespace so each word in the command line would be inspected.
      */
-    private void run2(Map.Entry<String, Object> foundActivators, Map<String, Object> activators) {
+    private void accessActivatorCommands(Map.Entry<String, Object> foundActivators, Map<String, Object> activators) {
         Map<String, Object> targetActivator = (Map<String, Object>) activators.get(foundActivators.getKey()); // saves the child object in a variable
         List<String> playerCommands = (List<String>) targetActivator.get("commands");
         List<String> entityCommands = (List<String>) targetActivator.get("entityCommands");

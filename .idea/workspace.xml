@@ -5,16 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e0568a24-c97e-427f-bc37-0e1d1e200921" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/jobs/BaseJobOperation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/jobs/operations/suboperations/upgradeparticlecommands/DustParticleConvert.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/jobs/operations/suboperations/upgradeparticlecommands/ItemParticleConvert.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/jobs/utility/JobState.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/controllers/ConfigFixerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/controllers/ConfigFixerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/jobs/operations/Job_ApplyMinecraftToCommands.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/jobs/operations/Job_ApplyMinecraftToCommands.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/jobs/operations/Job_DowngradeParticleCommands.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/jobs/operations/Job_DowngradeParticleCommands.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/jobs/operations/Job_UpgradeParticleCommands.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/jobs/operations/Job_UpgradeParticleCommands.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/scenes/Selection_ConfigFixer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/scenes/Selection_ConfigFixer.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/jobs/operations/suboperations/upgradeparticlecommands/ItemParticleConvert.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/jobs/operations/suboperations/upgradeparticlecommands/ItemParticleConvert.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

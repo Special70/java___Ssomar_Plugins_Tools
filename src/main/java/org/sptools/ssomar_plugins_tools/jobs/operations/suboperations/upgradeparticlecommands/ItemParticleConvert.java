@@ -8,12 +8,12 @@ public class ItemParticleConvert {
         // reference 1.20.5+ item particle: "item{item:"cake"}"
         switch (jobState.iteration) {
             case 0: {
-                strBuilder.append("{item:[").append(word);
+                strBuilder.append("{item:\"").append(word);
                 jobState.iteration += 1;
                 return;
             }
             case 1: {
-                strBuilder.append("\"}").append(Float.valueOf(word));
+                strBuilder.append("\"} ").append(word);
                 jobState.iteration = 0;
                 jobState.isGatheringData = false;
                 jobState.isInspectingParticleType = false;

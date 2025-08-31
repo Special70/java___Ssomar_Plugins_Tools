@@ -5,8 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e0568a24-c97e-427f-bc37-0e1d1e200921" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/jobs/BaseJobOperation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/jobs/operations/suboperations/upgradeparticlecommands/DustParticleConvert.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/jobs/operations/suboperations/upgradeparticlecommands/ItemParticleConvert.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/jobs/utility/JobState.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/jobs/JobHelper_AccessCommands.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/jobs/JobHelper_AccessCommands.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/controllers/ConfigFixerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/controllers/ConfigFixerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/jobs/operations/Job_ApplyMinecraftToCommands.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/jobs/operations/Job_ApplyMinecraftToCommands.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/jobs/operations/Job_DowngradeParticleCommands.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/jobs/operations/Job_DowngradeParticleCommands.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/jobs/operations/Job_UpgradeParticleCommands.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/sptools/ssomar_plugins_tools/jobs/operations/Job_UpgradeParticleCommands.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/scenes/Selection_ConfigFixer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/scenes/Selection_ConfigFixer.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,33 +62,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Application.HelloApplication.executor": "Run",
-    "Application.Main.executor": "Run",
-    "Application.Unnamed.executor": "Run",
-    "Maven.Ssomar_Plugins_Tools [clean].executor": "Run",
-    "Maven.Ssomar_Plugins_Tools [deploy].executor": "Run",
-    "Maven.Ssomar_Plugins_Tools [install].executor": "Run",
-    "Maven.Ssomar_Plugins_Tools [org.apache.maven.plugins:maven-clean-plugin:2.5:clean].executor": "Run",
-    "Maven.Ssomar_Plugins_Tools [org.apache.maven.plugins:maven-jar-plugin:2.4:jar].executor": "Run",
-    "Maven.Ssomar_Plugins_Tools [org.apache.maven.plugins:maven-javadoc-plugin:3.11.2:javadoc].executor": "Run",
-    "Maven.Ssomar_Plugins_Tools [org.openjfx:javafx-maven-plugin:0.0.8:run].executor": "Run",
-    "Maven.Ssomar_Plugins_Tools [package].executor": "Run",
-    "Maven.Ssomar_Plugins_Tools [validate].executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "E:/Razer/Documents/GitHub/Ssomar_Plugins_Tools/src/main/resources/fonts",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.5827586",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Unnamed.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Ssomar_Plugins_Tools [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Ssomar_Plugins_Tools [deploy].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Ssomar_Plugins_Tools [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Ssomar_Plugins_Tools [org.apache.maven.plugins:maven-clean-plugin:2.5:clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Ssomar_Plugins_Tools [org.apache.maven.plugins:maven-jar-plugin:2.4:jar].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Ssomar_Plugins_Tools [org.apache.maven.plugins:maven-javadoc-plugin:3.11.2:javadoc].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Ssomar_Plugins_Tools [org.openjfx:javafx-maven-plugin:0.0.8:run].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Ssomar_Plugins_Tools [package].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Ssomar_Plugins_Tools [validate].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/Razer/Documents/GitHub/Ssomar_Plugins_Tools/src/main/resources/fonts&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.5827586&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\Razer\Documents\GitHub\Ssomar_Plugins_Tools\src\main\resources\fonts" />

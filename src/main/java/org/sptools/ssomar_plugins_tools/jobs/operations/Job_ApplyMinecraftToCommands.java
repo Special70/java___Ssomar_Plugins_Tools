@@ -1,44 +1,16 @@
 package org.sptools.ssomar_plugins_tools.jobs.operations;
 
+import org.sptools.ssomar_plugins_tools.jobs.BaseJobOperation;
 import org.sptools.ssomar_plugins_tools.lib.ReusableFunctions;
 
 import java.util.List;
 import java.util.Set;
 
 
-public class Job_ApplyMinecraftToCommands {
+public class Job_ApplyMinecraftToCommands extends BaseJobOperation {
 
-    /**
-     * The provided arguments may be null, which is why an if condition exists in the code.
-     * It will mainly execute the {@link  Job_ApplyMinecraftToCommands#run(int, List)} function to do its job.
-     * @param playerCommands
-     * @param entityCommands
-     * @param targetCommands
-     * @param blockCommands
-     */
     public Job_ApplyMinecraftToCommands(List<String> playerCommands, List<String> entityCommands, List<String> targetCommands, List<String> blockCommands) {
-
-        ReusableFunctions.writeToConsole("Performing Job: ApplyMinecraftToCommands");
-
-        if (playerCommands != null) {
-            for (int iteration = 0; iteration < playerCommands.size(); iteration++) {
-                run(iteration, playerCommands);
-            }}
-
-        if (entityCommands != null) {
-            for (int iteration = 0; iteration < entityCommands.size(); iteration++) {
-                run(iteration, entityCommands);
-            }}
-
-        if (targetCommands != null) {
-            for (int iteration = 0; iteration < targetCommands.size(); iteration++) {
-                run(iteration, targetCommands);
-            }}
-
-        if (blockCommands != null) {
-            for (int iteration = 0; iteration < blockCommands.size(); iteration++) {
-                run(iteration, blockCommands);
-            }}
+        super(playerCommands, entityCommands, targetCommands, blockCommands);
     }
 
     Set<String> targetWords = Set.of(
@@ -66,7 +38,8 @@ public class Job_ApplyMinecraftToCommands {
      * @param cmdLineIdx used to point towards the correct line in the list
      * @param listArg pointer to access the command list and to be able to use the .set() method to apply the changes
      */
-    private void run(int cmdLineIdx, List<String> listArg) {
+    @Override
+    public void run(int cmdLineIdx, List<String> listArg) {
         String[] commandLineChopped = listArg.get(cmdLineIdx).split(" ");
 
         int signedCommands = 0; // for counting
@@ -75,13 +48,13 @@ public class Job_ApplyMinecraftToCommands {
         boolean doSkip = false; // this logic was added due to how there can be commands written as "effect give".
         for (String word : commandLineChopped) {
             if (targetWords.contains(word) && !doSkip) {
-                strBuilder.append(" minecraft:"+word);
+                strBuilder.append(" minecraft:").append(word);
                 signedCommands++;
                 doSkip = true;
             }
             else {
                 doSkip = false;
-                strBuilder.append(" "+word);
+                strBuilder.append(" ").append(word);
             }
         }
         strBuilder.deleteCharAt(0); // removes the unwanted whitespace at the start

@@ -46,8 +46,8 @@ public class ConfigFixerController implements Initializable {
     public ChoiceBox<String> choice2_1;
     @FXML
     private String[] particleCmdConversionChoices = new String[]{
-            "Upgrade all particle commands to 1.13+",
-            "Downgrade all 1.13+ particle commands"};
+            "Upgrade all particle commands to 1.20.5+",
+            "Downgrade all 1.20.5+ particle commands to 1.13-1.20.4"};
 
     /**
      * Once a folder is selected during the MainPage, it will be displayed here.<br/>
@@ -83,8 +83,8 @@ public class ConfigFixerController implements Initializable {
         ArrayList<String> paramBuilder = new ArrayList<>();
 
         if (choice1.isSelected()) paramBuilder.add("job-1.0");
-        if (choice2.isSelected() && choice2_1.getValue().equals("Upgrade all particle commands to 1.13+")) paramBuilder.add("job-2.0");
-        if (choice2.isSelected() && choice2_1.getValue().equals("Downgrade all 1.13+ particle commands")) paramBuilder.add("job-2.1");
+        if (choice2.isSelected() && choice2_1.getValue().equals(particleCmdConversionChoices[0])) paramBuilder.add("job-2.0");
+        if (choice2.isSelected() && choice2_1.getValue().equals(particleCmdConversionChoices[1])) paramBuilder.add("job-2.1");
 
         if (paramBuilder.isEmpty()) {
             Alert alert = new Alert(Alert.AlertType.ERROR);

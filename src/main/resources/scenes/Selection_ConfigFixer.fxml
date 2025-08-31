@@ -38,7 +38,7 @@
                   </Label>
                   <CheckBox fx:id="choice2" mnemonicParsing="false">
                      <graphic>
-                        <ChoiceBox fx:id="choice2_1" prefHeight="25.0" prefWidth="544.0" translateX="10.0" value="Upgrade all particle commands to 1.13+" />
+                        <ChoiceBox fx:id="choice2_1" prefHeight="25.0" prefWidth="544.0" translateX="10.0" value="Upgrade all particle commands to 1.20.5+" />
                      </graphic>
                      <VBox.margin>
                         <Insets />
